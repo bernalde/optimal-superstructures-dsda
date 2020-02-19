@@ -1,0 +1,185 @@
+
+--- Job CSTR_2.gms Start 09/11/19 00:27:56 28.1.0 r5b48834 WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input C:\Users\bernalde\Documents\gamsdir\projdir\CSTR_2.gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir C:\Users\bernalde\Documents\gamsdir\projdir\225m\
+    SysDir C:\GAMS\win64\28.1\
+    WorkDir C:\Users\bernalde\Documents\gamsdir\projdir\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    ErrorLog 99
+    IDE 1
+GAMS 28.1.0   Copyright (C) 1987-2019 GAMS Development. All rights reserved
+Licensee: Eval License Carnegie Mellon University        G190206/0001AB-GEN
+          Dept. of Chemical Engineering                              DC9476
+          License for teaching and research at degree granting institutions
+          License Admin: Ignacio E. Grossmann,
+--- Starting compilation
+--- CSTR_2.gms(136) 3 Mb
+--- Starting execution: elapsed 0:00:00.003
+--- CSTR_2.gms(120) 4 Mb
+--- Generating MINLP model SUP_CSTR
+--- CSTR_2.gms(130) 6 Mb
+---   48 rows  52 columns  190 non-zeroes
+---   227 nl-code  98 nl-non-zeroes
+---   10 discrete-columns
+--- CSTR_2.gms(130) 4 Mb
+--- Executing LINDOGLOBAL: elapsed 0:00:00.037
+
+LINDO            28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+   LINDO Driver
+   Lindo Systems Inc, www.lindo.com
+
+*** Optcr too small. Resetting optcr to 1e-9.
+
+Lindo API version 12.0.3977.157 built on May 16 2019 20:22:28
+Barrier Solver Version 8.1.0.081, Nonlinear Solver Version 3.17K
+Platform Windows 64x86 (B)
+
+
+Number of constraints:      47    le:       5, ge:       0, eq:      42, rn:       0 (ne:0)
+Number of variables  :      51    lb:       5, ub:       0, fr:       0, bx:      46 (fx:0)
+Number of nonzeroes  :     179    density: 0.00075(%)     , sb:       0
+
+Abs. Ranges     :         Min.          Max.    Condition.
+Matrix Coef. (A):      0.95000       1.00000       1.05263
+Obj. Vector  (c):  1.0000e-100   1.0000e-100       1.00000
+RHS Vector   (b):      1.00000       1.00000       1.00000
+Lower Bounds (l):     10.00000      10.00000       1.00000
+Upper Bounds (u):      1.00000      10.00000      10.00000
+BadScale Measure: 0
+
+Binary variables     :      10 (in 26 constraints)
+Integer variables    :       0 (in 0 constraints)
+
+Nonlinear variables  :      46
+Nonlinear constraints:      23
+Nonlinear nonzeroes  :      88+10
+
+Start LSsolveGOP
+
+Starting global optimization ...
+
+Number of Threads: 1
+
+Number of nonlinear functions/operators:  1
+ EP_MULTIPLY
+
+Starting GOP presolve ...
+First Call Local Solver
+Computing reduced bound...
+Searching for an initial solution...
+
+Starting Main Loop...
+
+
+ #NODEs  BOXES   LOWER BOUND     UPPER BOUND      RGAP   TIME(s)
+
+     1       0  -0.000000e+000  3.784004e+000  1.0e+000      0 (*N)
+     7       6  9.400000e-002  3.062015e+000  9.7e-001      2 (*N)
+   100      87  9.400000e-002  3.062015e+000  9.7e-001      3
+   200     167  9.400000e-002  3.062015e+000  9.7e-001      4
+   300     243  9.400000e-002  3.062015e+000  9.7e-001      4
+   400     317  9.400000e-002  3.062015e+000  9.7e-001      5
+   500     383  9.400000e-002  3.062015e+000  9.7e-001      6
+   526     399  9.400000e-002  3.062011e+000  9.7e-001      6 (*N)
+   600     429  9.573075e-002  3.062011e+000  9.7e-001     11
+   700     447  1.132791e-001  3.062011e+000  9.6e-001     18
+   724     447  1.155845e-001  3.062009e+000  9.6e-001     19 (*N)
+   800     451  1.317026e-001  3.062009e+000  9.6e-001     24
+   853     462  1.484667e-001  3.062008e+000  9.5e-001     27 (*N)
+   900     481  1.697723e-001  3.062008e+000  9.4e-001     30
+  1000     515  2.390912e-001  3.062008e+000  9.2e-001     35
+  1100     543  3.055822e-001  3.062008e+000  9.0e-001     39
+  1200     569  3.911991e-001  3.062008e+000  8.7e-001     43
+  1300     575  4.696825e-001  3.062008e+000  8.5e-001     46
+  1400     581  5.214654e-001  3.062008e+000  8.3e-001     50
+  1500     577  5.876481e-001  3.062008e+000  8.1e-001     53
+  1600     577  6.441365e-001  3.062008e+000  7.9e-001     57
+  1700     583  7.195308e-001  3.062008e+000  7.7e-001     61
+  1800     583  7.723578e-001  3.062008e+000  7.5e-001     64
+  1900     579  8.288012e-001  3.062008e+000  7.3e-001     68
+  2000     573  8.939463e-001  3.062008e+000  7.1e-001     71
+  2100     571  9.480991e-001  3.062008e+000  6.9e-001     75
+  2200     561  1.018767e+000  3.062008e+000  6.7e-001     78
+  2300     567  1.107807e+000  3.062008e+000  6.4e-001     82
+  2400     579  1.171883e+000  3.062008e+000  6.2e-001     86
+  2500     571  1.224670e+000  3.062008e+000  6.0e-001     89
+  2600     589  1.315869e+000  3.062008e+000  5.7e-001     94
+  2700     593  1.379933e+000  3.062008e+000  5.5e-001     98
+  2751     588  1.416100e+000  3.062002e+000  5.4e-001     99 (*N)
+  2800     595  1.449469e+000  3.062002e+000  5.3e-001    102
+  2900     565  1.512835e+000  3.062002e+000  5.1e-001    105
+  3000     553  1.576330e+000  3.062002e+000  4.9e-001    109
+  3100     543  1.652486e+000  3.062002e+000  4.6e-001    112
+  3200     529  1.713244e+000  3.062002e+000  4.4e-001    116
+  3300     521  1.780118e+000  3.062002e+000  4.2e-001    120
+  3400     515  1.841456e+000  3.062002e+000  4.0e-001    123
+  3500     485  1.919289e+000  3.062002e+000  3.7e-001    127
+  3512     479  1.922979e+000  3.062002e+000  3.7e-001    127 (*I)
+  3600     457  1.978340e+000  3.062002e+000  3.5e-001    131
+  3700     415  2.035613e+000  3.062002e+000  3.4e-001    134
+  3800     375  2.095670e+000  3.062002e+000  3.2e-001    137
+  3900     325  2.158493e+000  3.062002e+000  3.0e-001    140
+  3919     322  2.163012e+000  3.062002e+000  2.9e-001    141 (*I)
+  3921     320  2.163540e+000  3.062002e+000  2.9e-001    141 (*I)
+
+
+ #NODEs  BOXES   LOWER BOUND     UPPER BOUND      RGAP   TIME(s)
+
+  4000     279  2.225420e+000  3.062002e+000  2.7e-001    143
+  4100     231  2.290943e+000  3.062002e+000  2.5e-001    146
+  4200     161  2.400639e+000  3.062002e+000  2.2e-001    148
+  4300      67  2.491486e+000  3.062002e+000  1.9e-001    151
+  4368       3  3.004988e+000  3.062000e+000  1.9e-002    152 (*N)
+  4400       9  3.062000e+000  3.062000e+000  1.1e-008    153
+  4456      17  3.062000e+000  3.062000e+000  1.1e-008    153 (*I)
+  4493       0  3.062000e+000  3.062000e+000  0.0e+000    153 (*F)
+
+
+Terminating global search ...
+
+Computing a dual MIP solution by resolving the model with
+integer variables fixed at their optimal MIP values.
+Computation of dual MIP solution SUCCEEDED (0)
+
+
+ Global optimum found
+ Objective value              :          3.06199968671
+ Best Bound                   :          3.06199968671
+ Factors (ok,stb)             :                 499125 (100.00,100.00)
+ Simplex iterations           :                4960616
+ Barrier iterations           :                    466
+ Nonlinear iterations         :                  55834
+ Box iterations               :                   4493
+ Total number of boxes        :                   4493
+ Max. Depth                   :                    603
+ First solution time (sec.)   :                      2
+ Best solution time (sec.)    :                    152
+ Total time (sec.)            :                    153
+
+
+
+
+--- Fixing integer variables and calculating reduced costs
+
+
+--- Done calculating reduced costs
+
+
+Solution      = 3.06199968670738
+Best possible = 3.06199968670738
+Absolute gap  = 0  (OptCA = 0)
+Relative gap  = 0.00000  (OptCR = 1E-9)
+
+--- Restarting execution
+--- CSTR_2.gms(130) 2 Mb
+--- Reading solution for model SUP_CSTR
+*** Status: Normal completion
+--- Job CSTR_2.gms Stop 09/11/19 00:30:30 elapsed 0:02:33.969

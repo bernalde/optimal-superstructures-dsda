@@ -1,0 +1,143 @@
+
+--- Job CSTR_2.gms Start 09/11/19 00:24:56 28.1.0 r5b48834 WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input C:\Users\bernalde\Documents\gamsdir\projdir\CSTR_2.gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir C:\Users\bernalde\Documents\gamsdir\projdir\225m\
+    SysDir C:\GAMS\win64\28.1\
+    WorkDir C:\Users\bernalde\Documents\gamsdir\projdir\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    ErrorLog 99
+    IDE 1
+GAMS 28.1.0   Copyright (C) 1987-2019 GAMS Development. All rights reserved
+Licensee: Eval License Carnegie Mellon University        G190206/0001AB-GEN
+          Dept. of Chemical Engineering                              DC9476
+          License for teaching and research at degree granting institutions
+          License Admin: Ignacio E. Grossmann,
+--- Starting compilation
+--- CSTR_2.gms(136) 3 Mb
+--- Starting execution: elapsed 0:00:00.003
+--- CSTR_2.gms(120) 4 Mb
+--- Generating MINLP model SUP_CSTR
+--- CSTR_2.gms(130) 6 Mb
+---   48 rows  52 columns  190 non-zeroes
+---   227 nl-code  98 nl-non-zeroes
+---   10 discrete-columns
+--- CSTR_2.gms(130) 4 Mb
+--- Executing LINDOGLOBAL: elapsed 0:00:00.050
+
+LINDO            28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+   LINDO Driver
+   Lindo Systems Inc, www.lindo.com
+
+*** Optcr too small. Resetting optcr to 1e-9.
+
+Lindo API version 12.0.3977.157 built on May 16 2019 20:22:28
+Barrier Solver Version 8.1.0.081, Nonlinear Solver Version 3.17K
+Platform Windows 64x86 (B)
+
+
+Number of constraints:      47    le:       5, ge:       0, eq:      42, rn:       0 (ne:0)
+Number of variables  :      51    lb:       5, ub:       0, fr:       0, bx:      46 (fx:0)
+Number of nonzeroes  :     179    density: 0.00075(%)     , sb:       0
+
+Abs. Ranges     :         Min.          Max.    Condition.
+Matrix Coef. (A):      0.95000       1.00000       1.05263
+Obj. Vector  (c):  1.0000e-100   1.0000e-100       1.00000
+RHS Vector   (b):      1.00000       1.00000       1.00000
+Lower Bounds (l):     10.00000      10.00000       1.00000
+Upper Bounds (u):      1.00000      10.00000      10.00000
+BadScale Measure: 0
+
+Binary variables     :      10 (in 26 constraints)
+Integer variables    :       0 (in 0 constraints)
+
+Nonlinear variables  :      46
+Nonlinear constraints:      23
+Nonlinear nonzeroes  :      88+10
+
+Start LSsolveGOP
+
+Starting global optimization ...
+
+Number of Threads: 8
+
+Number of nonlinear functions/operators:  1
+ EP_MULTIPLY
+
+Starting GOP presolve ...
+First Call Local Solver
+Computing reduced bound...
+Searching for an initial solution...
+
+Starting Main Loop...
+
+
+ #NODEs  BOXES   LOWER BOUND     UPPER BOUND      RGAP   TIME(s)
+
+     1       1  -0.000000e+000  3.784004e+000  1.0e+000      0 (*N)
+    39      26  9.400000e-02  3.314845e+00  9.7e-01      2 (*N)
+    55      40  9.400000e-02  3.134337e+00  9.7e-01      3 (*N)
+   111      86  1.497167e-01  3.133785e+00  9.5e-01      4 (*N)
+   119      92  1.497167e-01  3.133777e+00  9.5e-01      4 (*N)
+   375     216  5.274748e-01  3.130198e+00  8.3e-01      7 (*N)
+   807     266  1.032043e+00  3.130198e+00  6.7e-01     14
+   967     278  1.205984e+00  3.130197e+00  6.1e-01     16 (*N)
+  1583     306  1.856237e+00  3.130191e+00  4.1e-01     25 (*N)
+  1607     316  1.872191e+00  3.130191e+00  4.0e-01     25
+  2079     224  2.319177e+00  3.130187e+00  2.6e-01     32 (*N)
+  2255     164  2.502362e+00  3.130186e+00  2.0e-01     34 (*N)
+  2359     122  2.619115e+00  3.062018e+00  1.4e-01     35 (*N)
+  2407      84  2.697610e+00  3.062018e+00  1.2e-01     35
+  2479      16  2.810126e+00  3.062015e+00  8.2e-02     36 (*N)
+  2503      12  3.062005e+00  3.062005e+00  5.1e-08     38 (*N)
+  2511      12  3.062005e+00  3.062005e+00  1.1e-08     38 (*I)
+  2517       0  3.062005e+00  3.062005e+00  0.0e+00     38 (*F)
+
+
+Terminating global search ...
+
+Computing a dual MIP solution by resolving the model with
+integer variables fixed at their optimal MIP values.
+Computation of dual MIP solution SUCCEEDED (0)
+
+
+ Global optimum found
+ Objective value              :          3.06200501345
+ Best Bound                   :          3.06200501345
+ Factors (ok,stb)             :                 294680 (100.00,100.00)
+ Simplex iterations           :                2840249
+ Barrier iterations           :                    163
+ Nonlinear iterations         :                   8511
+ Box iterations               :                   2517
+ Total number of boxes        :                   2517
+ Max. Depth                   :                    318
+ First solution time (sec.)   :                      0
+ Best solution time (sec.)    :                     38
+ Total time (sec.)            :                     38
+
+
+
+
+--- Fixing integer variables and calculating reduced costs
+
+
+--- Done calculating reduced costs
+
+
+Solution      = 3.06200501345262
+Best possible = 3.06200501345262
+Absolute gap  = 0  (OptCA = 0)
+Relative gap  = 0.00000  (OptCR = 1E-9)
+
+--- Restarting execution
+--- CSTR_2.gms(130) 2 Mb
+--- Reading solution for model SUP_CSTR
+*** Status: Normal completion
+--- Job CSTR_2.gms Stop 09/11/19 00:25:34 elapsed 0:00:38.398

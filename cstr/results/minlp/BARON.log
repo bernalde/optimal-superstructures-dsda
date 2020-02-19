@@ -1,0 +1,119 @@
+
+--- Job CSTR_2.gms Start 09/13/19 01:21:39 28.1.0 r5b48834 WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input C:\Users\bernalde\Documents\gamsdir\projdir\CSTR_2.gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir C:\Users\bernalde\Documents\gamsdir\projdir\225f\
+    SysDir C:\GAMS\win64\28.1\
+    WorkDir C:\Users\bernalde\Documents\gamsdir\projdir\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    ErrorLog 99
+    IDE 1
+GAMS 28.1.0   Copyright (C) 1987-2019 GAMS Development. All rights reserved
+Licensee: Eval License Carnegie Mellon University        G190206/0001AB-GEN
+          Dept. of Chemical Engineering                              DC9476
+          License for teaching and research at degree granting institutions
+          License Admin: Ignacio E. Grossmann,
+--- Starting compilation
+--- CSTR_2.gms(141) 3 Mb
+--- Starting execution: elapsed 0:00:00.003
+--- CSTR_2.gms(134) 4 Mb
+--- Generating MINLP model SUP_CSTR
+--- CSTR_2.gms(135) 6 Mb
+---   48 rows  52 columns  190 non-zeroes
+---   227 nl-code  98 nl-non-zeroes
+---   10 discrete-columns
+--- CSTR_2.gms(135) 4 Mb
+--- Executing BARON: elapsed 0:00:00.050
+
+GAMS/BARON       28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+--- Using Option File
+Reading parameter(s) from "C:\Users\bernalde\Documents\gamsdir\projdir\baron.opt"
+>>  *WantDual 1
+>>  *FirstFeas 1
+>>  *NumSol 10
+>>  *results 1
+>>  *ResName "sumary.dat"
+>>  *EpsR 0.0001
+Finished reading from "C:\Users\bernalde\Documents\gamsdir\projdir\baron.opt"
+===========================================================================
+ BARON version 19.7.13. Built: WIN-64 Sat Jul 13 11:49:21 EDT 2019
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as:
+
+ Kilinc, M. and N. V. Sahinidis, Exploiting integrality in the global
+ optimization of mixed-integer nonlinear programming problems in BARON,
+ Optimization Methods and Software, 33, 540-562, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: ILOG CPLEX
+ For NLP: MINOS, SNOPT, GAMS external NLP, IPOPT, FILTERSD, FILTERSQP
+===========================================================================
+ Doing local search
+ Preprocessing found feasible solution with value  9.89473684211
+ Solving bounding LP
+ Starting multi-start local search
+ Preprocessing found feasible solution with value  3.13019813303
+ Preprocessing found feasible solution with value  3.06201457665
+ Done with local search
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+          1             1             0.11     0.940000E-01     3.06201
+*      8734           185            14.28     0.168321         3.06200
+*      8767           185            14.38     0.168321         3.06199
+*      8812           190            14.47     0.168321         3.06196
+*      8998           203            14.89     0.186298         3.06154
+      24695           290            43.78     0.448412         3.06154
+      36919           148            73.41     0.748790         3.06154
+      48284            65           103.41     1.42256          3.06154
+      58509           127           133.39     1.51623          3.06154
+      67609            98           163.39     1.86071          3.06154
+      75676            79           193.38     1.89173          3.06154
+      83282            32           223.34     2.31601          3.06154
+      89919            22           253.30     2.33411          3.06154
+      96775           130           283.30     2.33411          3.06154
+     103122           207           313.30     2.33411          3.06154
+     109332           166           343.31     2.33411          3.06154
+     115217           138           373.30     2.34818          3.06154
+     121094            30           403.25     2.39872          3.06154
+     121844             0           406.97     3.06154          3.06154
+
+ Cleaning up
+
+                         *** Normal completion ***
+
+ Wall clock time:                   409.68
+ Total CPU time used:               406.97
+
+ Total no. of BaR iterations:  121844
+ Best solution found at node:    8998
+ Max. no. of nodes in memory:     311
+
+ All done
+===========================================================================
+
+Solution      = 3.06154073212274  found at node 8998
+Best possible = 3.06154072906
+Absolute gap  = 3.06274072769952E-9  optca = 1E-9
+Relative gap  = 1.00039195806353E-9  optcr = 1E-9
+  (Note that BARON uses a different formula to compute the relative gap as
+   was used for the above reported value.)
+
+--- Restarting execution
+--- CSTR_2.gms(135) 2 Mb
+--- Reading solution for model SUP_CSTR
+***
+*** Solver did not provide marginals for model SUP_CSTR
+***
+*** Status: Normal completion
+--- Job CSTR_2.gms Stop 09/13/19 01:28:29 elapsed 0:06:49.849

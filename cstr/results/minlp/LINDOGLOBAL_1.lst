@@ -1,0 +1,840 @@
+GAMS 28.1.0  r5b48834 Released Aug  2, 2019 WEX-WEI x86 64bit/MS Windows 09/11/19 00:27:56 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1
+   2  *------------------------SETS---------------------------------------------
+      ------
+   3  set N "Superstructure units" /1*5/;
+   4  set I "Chemical components" /A,B/;
+   5  alias(N,N1);
+   6
+   7  *-----------------------PARAMETERS AND SCALARS----------------------------
+      ------
+   8  ***Kinetic parameters
+   9  scalar m1 "Partial order of reaction 1 []" /1/;
+  10  scalar m2 "Partial order of reaction 2 []" /1/;
+  11  scalar k "kientic constant [L/(mol*s)]"/2/;
+  12  ***Feed parameters
+  13  scalar QF0 "Inlet volumetric flow [L/s]" /1/;
+  14  parameter C0(i) "Initial concentration of reagents [mol/L]"
+  15  /
+  16  A 0.99
+  17  B 0.01
+  18  /
+  19  ;
+  20  parameter F0(i) "Inlet molar flow [mol/s]";
+  21  F0(i)=C0(i)*QF0;
+  22
+  23  *-----------------------BINARY VARIABLES AND CONSTRAINTS------------------
+      ------
+  24  ***Independent binary variables
+  25  binary variable yf(n) "Location of the last reactor (feed reactor) in the
+      sueprstructure";
+  26  binary variable yr(n) "Location of the recycle flow";
+  27  ***Dependent binary variables
+  28  positive variable yp(n) "Unit operation. 1: Reaction. 0: Simple input-outp
+      ut";
+  29  equation defyp(n) "Definition of yp(n) in terms of the independent bianry
+      terms";
+  30  defyp(n)..yp(n)=e=1-(sum(n1$(ord(n1) <= ord(n)),yf(n1))-yf(n));
+  31  ***Logical constraints
+  32  equations logic1 "There is only one 'final' reactor in the superstructure"
+      ;
+  33  equation logic2   "There is only one recycle location";
+  34  equation logic3(n) "The recycle can be located at n if there is a reaction
+       operation";
+  35  logic1..sum(n,yf(n))=e=1;
+  36  logic2..sum(n,yr(n))=e=1;
+  37  logic3(n)..yr(n)=l=yp(n);
+  38
+  39  *-----------------------REAL VARIABLES------------------------------------
+      ------
+  40  ***Network variables
+  41  positive variable Q(n) "Outlet flow rate of the superstricture unit [L/s]"
+      ;
+  42  positive variable F(i,n) "Molar flow [mol/s]";
+  43  variable  rate(i,n) "Reaction rate [mol/(L*s)]";
+  44  positive variable V(n) "Reactor volume [L]";
+  45  ***Splitter variables
+  46  positive variable QR "Recycle flow rate  [L/s]";
+  47  positive variable QP "Product flow rate  [L/s]";
+  48  positive variable R(i) "Recycle molar flow [mol/s]";
+  49  positive variable P(i) "Product molar flow [mol/s]";
+  50
+  51  *-----------------------SUPERSTRUCTURE CONSTRAINTS------------------------
+      ------
+  52
+  53  ***Kinetic constraints
+  54  equation net_rate(i,n) "Reactor Network: Reaction rates";
+  55  net_rate(i,n)..(rate('A',n)*((Q(n))**m1)*((Q(n))**m2)+k*((F('A',n))**m1)*(
+      (F('B',n))**m2))$(ord(i) eq 1)+(rate('B',n)+rate('A',n))$(ord(i) eq 2)=e=0
+      ;
+  56
+  57  ***Network constraints
+  58  equation net_comp(i,n) "Reactor Network: Component molar balance";
+  59  equation net_cont(n) "Reactor Network: continuity equation";
+  60  net_comp(i,n)$(ord(n) ne card(n))..F(i,n+1)+yr(n)*R(i)-F(i,n)+yp(n)*rate(i
+      ,n)*V(n)=e=0;
+  61  net_cont(n)$(ord(n) ne card(n))..Q(n+1)+yr(n)*QR-Q(n)=e=0;
+  62
+  63
+  64  ***Feed unit constraints
+  65  equation feed_comp(i,n) "Feed unit: Component molar balance";
+  66  equation feed_cont(n) "Feed unit: continuity equation";
+  67  feed_comp(i,n)$(ord(n) eq card(n))..F0(i)+yr(n)*R(i)-F(i,n)+yp(n)*rate(i,n
+      )*V(n)=e=0;
+  68  feed_cont(n)$(ord(n) eq card(n))..QF0+yr(n)*QR-Q(n)=e=0;
+  69
+  70  ***Splitter constraints
+  71  equation spl_comp(i) "Splitter: Component molar balance";
+  72  equation spl_cont "Splitter: continuity equation";
+  73  equation spl_ad(i) "Splitter: additional splitter constraints";
+  74  spl_comp(i)..F(i,'1')-P(i)-R(i)=e=0;
+  75  spl_cont..Q('1')-QP-QR=e=0;
+  76  spl_ad(i)..P(i)*Q('1')-F(i,'1')*QP=e=0;
+  77
+  78  *---------------------VOLUMEN CONSTRAINT----------------------------------
+      ------
+  79  equation eqvol(n);
+  80  eqvol(n)$(ord(n) ne 1)..V(n)=e=V(n-1);
+  81
+  82  *---------------------PRODUCT QUALITY CONSTRAINT--------------------------
+      ------
+  83  equation qual;
+  84  qual..QP*0.95=e=P('B');
+  85  *----------------------OBJECTIVE FUNCTION---------------------------------
+      ------
+  86
+  87  variables zobj;
+  88
+  89  equation Fobj;
+  90  Fobj..zobj=e=sum(n,V(n)*yp(n));
+  91
+  92  *-----------------------BOUNDS ON VARIABLES-------------------------------
+      ------
+  93  Q.up(n)=10;
+  94  QR.up=10;
+  95  QP.up=10;
+  96  R.up(i)=10;
+  97  P.up(i)=10;
+  98  F.up(i,n)=10;
+  99  rate.lo(i,n)=-10;
+ 100  rate.up(i,n)=10;
+ 101  V.up(n)=10;
+ 102  *----------------------VARIABLE INITIALIZATION----------------------------
+      ------
+ 103  yf.l(n)=0;
+ 104  yr.l(n)=0;
+ 105  yp.l(n)=0;
+ 106  Q.l(n)=0;
+ 107  F.l(i,n)=0;
+ 108  rate.l(i,n)=0;
+ 109  V.l(n)=0;
+ 110  QR.l=0;
+ 111  QP.l=0;
+ 112  R.l(i)=0;
+ 113  P.l(i)=0;
+ 114  *----------------------SOLUTION-------------------------------------------
+      ------
+ 115  model SUP_CSTR /all/;
+ 116  SUP_CSTR.optcr=0;
+ 117  SUP_CSTR.optca=0;
+ 118  *execute_loadpoint "in";
+ 119  option minlp=LINDOGLOBAL;
+ 120  option threads=1;
+ 129  *SUP_CSTR.OptFile = 1;
+ 130  solve SUP_CSTR using minlp minimizing zobj;
+ 131  *execute_unload "BARON"
+ 132
+ 133
+ 134
+ 135
+ 136
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  28.1.0 r5b48834 WEX-WEI
+GAMS 28.1.0  r5b48834 Released Aug  2, 2019 WEX-WEI x86 64bit/MS Windows 09/11/19 00:27:56 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE SUP_CSTR Using MINLP From line 130
+
+
+---- defyp  =E=  Definition of yp(n) in terms of the independent bianry terms
+
+defyp(1)..  yp(1) =E= 1 ; (LHS = 0, INFES = 1 ****)
+
+defyp(2)..  yf(1) + yp(2) =E= 1 ; (LHS = 0, INFES = 1 ****)
+
+defyp(3)..  yf(1) + yf(2) + yp(3) =E= 1 ; (LHS = 0, INFES = 1 ****)
+
+REMAINING 2 ENTRIES SKIPPED
+
+
+---- logic1  =E=  There is only one 'final' reactor in the superstructure
+
+logic1..  yf(1) + yf(2) + yf(3) + yf(4) + yf(5) =E= 1 ; (LHS = 0
+     , INFES = 1 ****)
+
+
+---- logic2  =E=  There is only one recycle location
+
+logic2..  yr(1) + yr(2) + yr(3) + yr(4) + yr(5) =E= 1 ; (LHS = 0
+     , INFES = 1 ****)
+
+
+---- logic3  =L=  The recycle can be located at n if there is a reaction operati
+                  on
+
+logic3(1)..  yr(1) - yp(1) =L= 0 ; (LHS = 0)
+
+logic3(2)..  yr(2) - yp(2) =L= 0 ; (LHS = 0)
+
+logic3(3)..  yr(3) - yp(3) =L= 0 ; (LHS = 0)
+
+REMAINING 2 ENTRIES SKIPPED
+
+
+---- net_rate  =E=  Reactor Network: Reaction rates
+
+net_rate(A,1)..  (0)*Q(1) + (0)*F(A,1) + (0)*F(B,1) + (0)*rate(A,1) =E= 0 ;
+
+      (LHS = 0)
+
+net_rate(A,2)..  (0)*Q(2) + (0)*F(A,2) + (0)*F(B,2) + (0)*rate(A,2) =E= 0 ;
+
+      (LHS = 0)
+
+net_rate(A,3)..  (0)*Q(3) + (0)*F(A,3) + (0)*F(B,3) + (0)*rate(A,3) =E= 0 ;
+
+      (LHS = 0)
+
+REMAINING 7 ENTRIES SKIPPED
+
+
+---- net_comp  =E=  Reactor Network: Component molar balance
+
+net_comp(A,1)..  (0)*yr(1) + (0)*yp(1) - F(A,1) + F(A,2) + (0)*rate(A,1)
+
+      + (0)*V(1) + (0)*R(A) =E= 0 ; (LHS = 0)
+
+net_comp(A,2)..  (0)*yr(2) + (0)*yp(2) - F(A,2) + F(A,3) + (0)*rate(A,2)
+
+      + (0)*V(2) + (0)*R(A) =E= 0 ; (LHS = 0)
+
+net_comp(A,3)..  (0)*yr(3) + (0)*yp(3) - F(A,3) + F(A,4) + (0)*rate(A,3)
+
+      + (0)*V(3) + (0)*R(A) =E= 0 ; (LHS = 0)
+
+REMAINING 5 ENTRIES SKIPPED
+
+
+---- net_cont  =E=  Reactor Network: continuity equation
+
+net_cont(1)..  (0)*yr(1) - Q(1) + Q(2) + (0)*QR =E= 0 ; (LHS = 0)
+
+net_cont(2)..  (0)*yr(2) - Q(2) + Q(3) + (0)*QR =E= 0 ; (LHS = 0)
+
+net_cont(3)..  (0)*yr(3) - Q(3) + Q(4) + (0)*QR =E= 0 ; (LHS = 0)
+
+REMAINING ENTRY SKIPPED
+
+
+---- feed_comp  =E=  Feed unit: Component molar balance
+
+feed_comp(A,5)..  (0)*yr(5) + (0)*yp(5) - F(A,5) + (0)*rate(A,5) + (0)*V(5)
+
+      + (0)*R(A) =E= -0.99 ; (LHS = 0, INFES = 0.99 ****)
+
+feed_comp(B,5)..  (0)*yr(5) + (0)*yp(5) - F(B,5) + (0)*rate(B,5) + (0)*V(5)
+
+      + (0)*R(B) =E= -0.01 ; (LHS = 0, INFES = 0.01 ****)
+
+
+---- feed_cont  =E=  Feed unit: continuity equation
+
+feed_cont(5)..  (0)*yr(5) - Q(5) + (0)*QR =E= -1 ; (LHS = 0, INFES = 1 ****)
+
+
+---- spl_comp  =E=  Splitter: Component molar balance
+
+spl_comp(A)..  F(A,1) - R(A) - P(A) =E= 0 ; (LHS = 0)
+
+spl_comp(B)..  F(B,1) - R(B) - P(B) =E= 0 ; (LHS = 0)
+
+
+---- spl_cont  =E=  Splitter: continuity equation
+
+spl_cont..  Q(1) - QR - QP =E= 0 ; (LHS = 0)
+
+
+---- spl_ad  =E=  Splitter: additional splitter constraints
+
+spl_ad(A)..  (0)*Q(1) + (0)*F(A,1) + (0)*QP + (0)*P(A) =E= 0 ; (LHS = 0)
+
+spl_ad(B)..  (0)*Q(1) + (0)*F(B,1) + (0)*QP + (0)*P(B) =E= 0 ; (LHS = 0)
+
+
+---- eqvol  =E=
+
+eqvol(2)..  - V(1) + V(2) =E= 0 ; (LHS = 0)
+
+eqvol(3)..  - V(2) + V(3) =E= 0 ; (LHS = 0)
+
+eqvol(4)..  - V(3) + V(4) =E= 0 ; (LHS = 0)
+
+REMAINING ENTRY SKIPPED
+
+
+---- qual  =E=
+
+qual..  0.95*QP - P(B) =E= 0 ; (LHS = 0)
+
+
+---- Fobj  =E=
+
+Fobj..  (0)*yp(1) + (0)*yp(2) + (0)*yp(3) + (0)*yp(4) + (0)*yp(5) + (0)*V(1)
+
+      + (0)*V(2) + (0)*V(3) + (0)*V(4) + (0)*V(5) + zobj =E= 0 ; (LHS = 0)
+
+GAMS 28.1.0  r5b48834 Released Aug  2, 2019 WEX-WEI x86 64bit/MS Windows 09/11/19 00:27:56 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE SUP_CSTR Using MINLP From line 130
+
+
+---- yf  Location of the last reactor (feed reactor) in the sueprstructure
+
+yf(1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       defyp(2)
+        1       defyp(3)
+        1       defyp(4)
+        1       defyp(5)
+        1       logic1
+
+yf(2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       defyp(3)
+        1       defyp(4)
+        1       defyp(5)
+        1       logic1
+
+yf(3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       defyp(4)
+        1       defyp(5)
+        1       logic1
+
+REMAINING 2 ENTRIES SKIPPED
+
+---- yr  Location of the recycle flow
+
+yr(1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       logic2
+        1       logic3(1)
+       (0)      net_comp(A,1)
+       (0)      net_comp(B,1)
+       (0)      net_cont(1)
+
+yr(2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       logic2
+        1       logic3(2)
+       (0)      net_comp(A,2)
+       (0)      net_comp(B,2)
+       (0)      net_cont(2)
+
+yr(3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       logic2
+        1       logic3(3)
+       (0)      net_comp(A,3)
+       (0)      net_comp(B,3)
+       (0)      net_cont(3)
+
+REMAINING 2 ENTRIES SKIPPED
+
+---- yp  Unit operation. 1: Reaction. 0: Simple input-output
+
+yp(1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       defyp(1)
+       -1       logic3(1)
+       (0)      net_comp(A,1)
+       (0)      net_comp(B,1)
+       (0)      Fobj
+
+yp(2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       defyp(2)
+       -1       logic3(2)
+       (0)      net_comp(A,2)
+       (0)      net_comp(B,2)
+       (0)      Fobj
+
+yp(3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       defyp(3)
+       -1       logic3(3)
+       (0)      net_comp(A,3)
+       (0)      net_comp(B,3)
+       (0)      Fobj
+
+REMAINING 2 ENTRIES SKIPPED
+
+---- Q  Outlet flow rate of the superstricture unit [L/s]
+
+Q(1)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_rate(A,1)
+       -1       net_cont(1)
+        1       spl_cont
+       (0)      spl_ad(A)
+       (0)      spl_ad(B)
+
+Q(2)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_rate(A,2)
+        1       net_cont(1)
+       -1       net_cont(2)
+
+Q(3)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_rate(A,3)
+        1       net_cont(2)
+       -1       net_cont(3)
+
+REMAINING 2 ENTRIES SKIPPED
+
+---- F  Molar flow [mol/s]
+
+F(A,1)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_rate(A,1)
+       -1       net_comp(A,1)
+        1       spl_comp(A)
+       (0)      spl_ad(A)
+
+F(A,2)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_rate(A,2)
+        1       net_comp(A,1)
+       -1       net_comp(A,2)
+
+F(A,3)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_rate(A,3)
+        1       net_comp(A,2)
+       -1       net_comp(A,3)
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- rate  Reaction rate [mol/(L*s)]
+
+rate(A,1)
+                (.LO, .L, .UP, .M = -10, 0, 10, 0)
+       (0)      net_rate(A,1)
+        1       net_rate(B,1)
+       (0)      net_comp(A,1)
+
+rate(A,2)
+                (.LO, .L, .UP, .M = -10, 0, 10, 0)
+       (0)      net_rate(A,2)
+        1       net_rate(B,2)
+       (0)      net_comp(A,2)
+
+rate(A,3)
+                (.LO, .L, .UP, .M = -10, 0, 10, 0)
+       (0)      net_rate(A,3)
+        1       net_rate(B,3)
+       (0)      net_comp(A,3)
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- V  Reactor volume [L]
+
+V(1)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_comp(A,1)
+       (0)      net_comp(B,1)
+       -1       eqvol(2)
+       (0)      Fobj
+
+V(2)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_comp(A,2)
+       (0)      net_comp(B,2)
+        1       eqvol(2)
+       -1       eqvol(3)
+       (0)      Fobj
+
+V(3)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_comp(A,3)
+       (0)      net_comp(B,3)
+        1       eqvol(3)
+       -1       eqvol(4)
+       (0)      Fobj
+
+REMAINING 2 ENTRIES SKIPPED
+
+---- QR  Recycle flow rate  [L/s]
+
+QR
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_cont(1)
+       (0)      net_cont(2)
+       (0)      net_cont(3)
+       (0)      net_cont(4)
+       (0)      feed_cont(5)
+       -1       spl_cont
+
+
+---- QP  Product flow rate  [L/s]
+
+QP
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       -1       spl_cont
+       (0)      spl_ad(A)
+       (0)      spl_ad(B)
+        0.95    qual
+
+
+---- R  Recycle molar flow [mol/s]
+
+R(A)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_comp(A,1)
+       (0)      net_comp(A,2)
+       (0)      net_comp(A,3)
+       (0)      net_comp(A,4)
+       (0)      feed_comp(A,5)
+       -1       spl_comp(A)
+
+R(B)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       (0)      net_comp(B,1)
+       (0)      net_comp(B,2)
+       (0)      net_comp(B,3)
+       (0)      net_comp(B,4)
+       (0)      feed_comp(B,5)
+       -1       spl_comp(B)
+
+
+---- P  Product molar flow [mol/s]
+
+P(A)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       -1       spl_comp(A)
+       (0)      spl_ad(A)
+
+P(B)
+                (.LO, .L, .UP, .M = 0, 0, 10, 0)
+       -1       spl_comp(B)
+       (0)      spl_ad(B)
+       -1       qual
+
+
+---- zobj
+
+zobj
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       Fobj
+
+GAMS 28.1.0  r5b48834 Released Aug  2, 2019 WEX-WEI x86 64bit/MS Windows 09/11/19 00:27:56 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE SUP_CSTR Using MINLP From line 130
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          15     SINGLE EQUATIONS           48
+BLOCKS OF VARIABLES          12     SINGLE VARIABLES           52
+NON ZERO ELEMENTS           190     NON LINEAR N-Z             98
+DERIVATIVE POOL              20     CONSTANT POOL              16
+CODE LENGTH                 227     DISCRETE VARIABLES         10
+
+
+GENERATION TIME      =        0.016 SECONDS      4 MB  28.1.0 r5b48834 WEX-WEI
+
+
+EXECUTION TIME       =        0.031 SECONDS      4 MB  28.1.0 r5b48834 WEX-WEI
+GAMS 28.1.0  r5b48834 Released Aug  2, 2019 WEX-WEI x86 64bit/MS Windows 09/11/19 00:27:56 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE SUP_CSTR Using MINLP From line 130
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   SUP_CSTR            OBJECTIVE  zobj
+     TYPE    MINLP               DIRECTION  MINIMIZE
+     SOLVER  LINDOGLOBAL         FROM LINE  130
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE                3.0620
+
+ RESOURCE USAGE, LIMIT        153.750      1000.000
+ ITERATION COUNT, LIMIT   5016916    2000000000
+ EVALUATION ERRORS             NA             0
+
+LINDO            28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+   LINDO Driver
+   Lindo Systems Inc, www.lindo.com
+
+*** Optcr too small. Resetting optcr to 1e-9.
+
+Lindo API version 12.0.3977.157 built on May 16 2019 20:22:28
+
+--- Fixing integer variables and calculating reduced costs
+
+
+--- Done calculating reduced costs
+
+
+Solution      = 3.06199968670738
+Best possible = 3.06199968670738
+Absolute gap  = 0  (OptCA = 0)
+Relative gap  = 0.00000  (OptCR = 1E-9)
+
+
+---- EQU defyp  Definition of yp(n) in terms of the independent bianry terms
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1     1.000     1.000     1.000      .
+2     1.000     1.000     1.000     0.109
+3     1.000     1.000     1.000     0.074
+4     1.000     1.000     1.000    -0.014
+5     1.000     1.000     1.000    -0.169
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU logic1         1.000     1.000     1.000      EPS
+---- EQU logic2         1.000     1.000     1.000      EPS
+
+  logic1  There is only one 'final' reactor in the superstructure
+  logic2  There is only one recycle location
+
+---- EQU logic3  The recycle can be located at n if there is a reaction operatio
+                 n
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1     -INF     -1.000      .         .
+2     -INF     -1.000      .         .
+3     -INF     -1.000      .         .
+4     -INF     -1.000      .         .
+5     -INF       .         .         .
+
+---- EQU net_rate  Reactor Network: Reaction rates
+
+       LOWER     LEVEL     UPPER    MARGINAL
+
+A.1      .         .         .        4.253
+A.2      .         .         .        2.257
+A.3      .         .         .        1.363
+A.4      .         .         .        1.090
+A.5      .         .         .        1.650
+B.1      .         .         .      -11.709
+B.2      .         .         .      -12.022
+B.3      .         .         .      -12.399
+B.4      .         .         .      -12.969
+B.5      .         .         .      -14.418
+
+---- EQU net_comp  Reactor Network: Component molar balance
+
+       LOWER     LEVEL     UPPER    MARGINAL
+
+A.1      .         .         .       10.723
+A.2      .         .         .       15.175
+A.3      .         .         .       17.556
+A.4      .         .         .       19.024
+B.1      .         .         .       19.120
+B.2      .         .         .       19.631
+B.3      .         .         .       20.247
+B.4      .         .         .       21.177
+
+---- EQU net_cont  Reactor Network: continuity equation
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1      .         .         .      -18.700
+2      .         .         .      -19.616
+3      .         .         .      -20.596
+4      .         .         .      -21.735
+
+---- EQU feed_comp  Feed unit: Component molar balance
+
+       LOWER     LEVEL     UPPER    MARGINAL
+
+A.5    -0.990    -0.990    -0.990    20.286
+B.5    -0.010    -0.010    -0.010    23.544
+
+---- EQU feed_cont  Feed unit: continuity equation
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+5    -1.000    -1.000    -1.000   -23.381
+
+---- EQU spl_comp  Splitter: Component molar balance
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+A      .         .         .       20.286
+B      .         .         .       23.544
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU spl_cont        .         .         .      -23.381
+
+  spl_cont  Splitter: continuity equation
+
+---- EQU spl_ad  Splitter: additional splitter constraints
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+A      .         .         .       18.449
+B      .         .         .        4.892
+
+---- EQU eqvol
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+2      .         .         .       -0.202
+3      .         .         .       -0.380
+4      .         .         .       -0.500
+5      .         .         .       -0.478
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU qual            .         .         .      -18.165
+---- EQU Fobj            .         .         .        1.000
+
+---- VAR yf  Location of the last reactor (feed reactor) in the sueprstructure
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1      .         .        1.000      EPS
+2      .         .        1.000     0.109
+3      .         .        1.000     0.182
+4      .         .        1.000     0.169
+5      .        1.000     1.000      EPS
+
+---- VAR yr  Location of the recycle flow
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1      .         .        1.000      EPS
+2      .         .        1.000     0.021
+3      .         .        1.000     0.048
+4      .         .        1.000     0.066
+5      .        1.000     1.000      EPS
+
+---- VAR yp  Unit operation. 1: Reaction. 0: Simple input-output
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1      .        1.000     +INF       .
+2      .        1.000     +INF       .
+3      .        1.000     +INF       .
+4      .        1.000     +INF       .
+5      .        1.000     +INF     -0.124
+
+---- VAR Q  Outlet flow rate of the superstricture unit [L/s]
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1      .        1.101    10.000      .
+2      .        1.101    10.000      .
+3      .        1.101    10.000      .
+4      .        1.101    10.000      .
+5      .        1.101    10.000      .
+
+---- VAR F  Molar flow [mol/s]
+
+       LOWER     LEVEL     UPPER    MARGINAL
+
+A.1      .        0.055    10.000      .
+A.2      .        0.113    10.000      .
+A.3      .        0.226    10.000      .
+A.4      .        0.426    10.000      .
+A.5      .        0.717    10.000      .
+B.1      .        1.046    10.000      .
+B.2      .        0.987    10.000      .
+B.3      .        0.874    10.000      .
+B.4      .        0.674    10.000      .
+B.5      .        0.384    10.000      .
+
+---- VAR rate  Reaction rate [mol/(L*s)]
+
+       LOWER     LEVEL     UPPER    MARGINAL
+
+A.1   -10.000    -0.095    10.000      .
+A.2   -10.000    -0.185    10.000      .
+A.3   -10.000    -0.327    10.000      .
+A.4   -10.000    -0.475    10.000      .
+A.5   -10.000    -0.454    10.000      .
+B.1   -10.000     0.095    10.000      .
+B.2   -10.000     0.185    10.000      .
+B.3   -10.000     0.327    10.000      .
+B.4   -10.000     0.475    10.000      .
+B.5   -10.000     0.454    10.000      .
+
+---- VAR V  Reactor volume [L]
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+1      .        0.612    10.000      .
+2      .        0.612    10.000      .
+3      .        0.612    10.000      .
+4      .        0.612    10.000      .
+5      .        0.612    10.000      .
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR QR              .        0.101    10.000      .
+---- VAR QP              .        1.000    10.000      .
+
+  QR  Recycle flow rate  [L/s]
+  QP  Product flow rate  [L/s]
+
+---- VAR R  Recycle molar flow [mol/s]
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+A      .        0.005    10.000      .
+B      .        0.096    10.000      .
+
+---- VAR P  Product molar flow [mol/s]
+
+     LOWER     LEVEL     UPPER    MARGINAL
+
+A      .        0.050    10.000      .
+B      .        0.950    10.000      .
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR zobj           -INF      3.062     +INF       .
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+                             0     ERRORS
+
+
+EXECUTION TIME       =        0.000 SECONDS      2 MB  28.1.0 r5b48834 WEX-WEI
+
+
+USER: Eval License Carnegie Mellon University        G190206/0001AB-GEN
+      Dept. of Chemical Engineering                              DC9476
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\bernalde\Documents\gamsdir\projdir\CSTR_2.gms
+Output     C:\Users\bernalde\Documents\gamsdir\projdir\CSTR_2.lst

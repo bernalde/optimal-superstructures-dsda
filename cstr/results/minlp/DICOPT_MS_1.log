@@ -1,0 +1,3795 @@
+
+--- Job CSTR_2.gms Start 09/11/19 01:55:31 28.1.0 r5b48834 WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input C:\Users\bernalde\Documents\gamsdir\projdir\CSTR_2.gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir C:\Users\bernalde\Documents\gamsdir\projdir\225r\
+    SysDir C:\GAMS\win64\28.1\
+    WorkDir C:\Users\bernalde\Documents\gamsdir\projdir\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    ErrorLog 99
+    IDE 1
+GAMS 28.1.0   Copyright (C) 1987-2019 GAMS Development. All rights reserved
+Licensee: Eval License Carnegie Mellon University        G190206/0001AB-GEN
+          Dept. of Chemical Engineering                              DC9476
+          License for teaching and research at degree granting institutions
+          License Admin: Ignacio E. Grossmann,
+--- Starting compilation
+--- CSTR_2.gms(141) 3 Mb
+--- Starting execution: elapsed 0:00:00.006
+--- CSTR_2.gms(134) 4 Mb
+--- Generating MINLP model SUP_CSTR
+--- CSTR_2.gms(135) 6 Mb
+---   48 rows  52 columns  190 non-zeroes
+---   227 nl-code  98 nl-non-zeroes
+---   10 discrete-columns
+--- CSTR_2.gms(135) 4 Mb
+--- Executing DICOPT: elapsed 0:00:00.032
+-------------------------------------------------------------------------------
+Dicopt 2         28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+-------------------------------------------------------------------------------
+by Aldo Vecchietti, Director del Instituto INGAR,
+   CONICET, UTN, Santa Fe, Argentina
+by Ignacio E. Grossmann, Chemical Engineering Faculty,
+   Carnegie Mellon University, Pittsburgh, PA, USA
+-------------------------------------------------------------------------------
+Reading parameter(s) from "C:\Users\bernalde\Documents\gamsdir\projdir\dicopt.opt"
+>>  stop 0
+>>  relaxed 2
+Finished reading from "C:\Users\bernalde\Documents\gamsdir\projdir\dicopt.opt"
+
+--- WARNING : All binary and integer variables do have fixed values.
+--- Relaxed option = 2 has been previously selected. Changed to relaxed = 0
+--- DICOPT: Starting major iteration 1
+--- DICOPT: Setting up first NLP with fixed discrete variables.
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =       1000 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  -0.000e+00 INF +1.010e+00
+     0 +1.000e+30     -1.000e+30                  -0.000e+00 INF +1.010e+00
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.541e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC +9.895e+00 +9.895e+00 KTC +2.767e-15
+   220 +3.805e+08 REJ +2.624e+07  ACC +9.895e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   240 +8.346e+07 ACC +1.442e+08  ACC +9.895e+00 +9.895e+00 KTC +3.244e-16
+   248 +8.135e+07 ACC +8.346e+07  ACC +9.895e+00 +9.895e+00 KTC +2.134e-16
+   251 +4.685e+07 ACC +8.135e+07  ACC +9.895e+00 +9.895e+00 KTC +8.674e-18
+   260 +9.276e+08 REJ +4.685e+07  ACC +9.895e+00
+   271 +1.695e+07 ACC +4.685e+07  ACC +9.895e+00 +9.895e+00 KTC +3.367e-10
+   280 +7.708e+07 REJ +1.695e+07  ACC +9.895e+00
+   300 +3.428e+08 REJ +7.708e+07  ACC +9.895e+00
+   300 +3.428e+08 REJ +7.708e+07  ACC +9.895e+00
+   320 +7.484e+08 REJ +1.105e+08  ACC +9.895e+00
+   322 +1.097e+08 ACC +1.105e+08  ACC +9.895e+00 +9.895e+00 KTC +2.134e-16
+   326 +2.500e+07 ACC +1.097e+08  ACC +9.895e+00 +9.895e+00 KTC +2.255e-17
+   334 +1.475e+07 ACC +2.500e+07  ACC +9.895e+00 +9.895e+00 KTC +1.628e-09
+   340 +8.601e+07 REJ +1.475e+07  ACC +9.895e+00
+   360 +6.295e+08 REJ +1.770e+07  ACC +9.895e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   380 +1.729e+08 REJ +1.571e+08  ACC +9.895e+00
+   385 +1.563e+08 ACC +1.571e+08  ACC +9.895e+00 +9.895e+00 KTC +2.134e-16
+   396 +1.050e+08 ACC +1.563e+08  ACC +9.895e+00 +9.895e+00 KTC +2.307e-16
+   400 +1.107e+08 REJ +1.050e+08  ACC +9.895e+00
+   400 +1.107e+08 REJ +1.050e+08  ACC +9.895e+00
+   410 +4.681e+07 ACC +1.050e+08  ACC +9.895e+00 -0.000e+00 INF +1.008e+00
+   420 +4.972e+08 REJ +4.681e+07  ACC +9.895e+00
+   440 +5.891e+08 REJ +9.680e+07  ACC +9.895e+00
+   451 +8.912e+07 ACC +9.680e+07  ACC +9.895e+00 +9.895e+00 KTC +2.067e-14
+   460 +3.615e+08 REJ +8.912e+07  ACC +9.895e+00
+   475 +1.164e+08 ACC +1.319e+08  ACC +9.895e+00 +9.895e+00 KTC +2.562e-10
+   480 +6.279e+08 REJ +1.164e+08  ACC +9.895e+00
+   486 +7.547e+07 ACC +1.164e+08  ACC +9.895e+00 +9.895e+00 KTC +8.674e-18
+   498 +7.282e+07 ACC +7.547e+07  ACC +9.895e+00 +9.895e+00 KTC +3.244e-16
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   499 +6.871e+07 ACC +7.282e+07  ACC +9.895e+00 +9.895e+00 KTC +8.795e-16
+   500 +3.902e+08 REJ +6.871e+07  ACC +9.895e+00
+   500 +3.902e+08 REJ +6.871e+07  ACC +9.895e+00
+   520 +2.342e+08 REJ +6.871e+07  ACC +9.895e+00
+   532 +8.153e+07 ACC +1.018e+08  ACC +9.895e+00 +9.895e+00 KTC +8.674e-18
+   540 +4.778e+08 REJ +8.153e+07  ACC +9.895e+00
+   551 +5.833e+07 ACC +8.153e+07  ACC +9.895e+00 +9.895e+00 KTC +8.674e-18
+   560 +4.521e+08 REJ +5.833e+07  ACC +9.895e+00
+   572 +5.248e+07 ACC +5.833e+07  ACC +9.895e+00 +9.895e+00 KTC +4.597e-16
+   580 +3.311e+08 REJ +5.248e+07  ACC +9.895e+00
+   600 +2.263e+08 REJ +6.680e+07  ACC +9.895e+00
+   600 +2.263e+08 REJ +6.680e+07  ACC +9.895e+00
+   620 +4.015e+08 REJ +1.419e+08  ACC +9.895e+00
+   625 +1.390e+08 ACC +1.419e+08  ACC +9.895e+00 +9.895e+00 KTC +8.674e-18
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   640 +8.334e+07 ACC +1.390e+08  ACC +9.895e+00 +9.895e+00 KTC +3.114e-15
+   660 +5.771e+08 REJ +8.334e+07  ACC +9.895e+00
+   664 +7.964e+07 ACC +1.755e+08  ACC +9.895e+00 +9.895e+00 KTC +2.134e-16
+   680 +5.198e+08 REJ +7.964e+07  ACC +9.895e+00
+   700 +4.810e+08 REJ +1.053e+08  ACC +9.895e+00
+   700 +4.810e+08 REJ +1.053e+08  ACC +9.895e+00
+   720 +4.777e+08 REJ +1.263e+08  ACC +9.895e+00
+   725 +6.636e+07 ACC +1.263e+08  ACC +9.895e+00 +9.895e+00 KTC +2.767e-15
+   738 +2.628e+07 ACC +6.636e+07  ACC +9.895e+00 +9.895e+00 KTC +1.752e-16
+   740 +3.518e+08 REJ +2.628e+07  ACC +9.895e+00
+   760 +3.168e+08 REJ +1.733e+08  ACC +9.895e+00
+   763 +1.381e+08 ACC +1.733e+08  ACC +9.895e+00 +9.895e+00 KTC +2.134e-16
+   766 +1.095e+08 ACC +1.381e+08  ACC +9.895e+00 +9.895e+00 KTC +4.354e-16
+   775 +5.002e+07 ACC +1.095e+08  ACC +9.895e+00 +9.895e+00 KTC +2.134e-16
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   780 +4.205e+08 REJ +5.002e+07  ACC +9.895e+00
+   786 +3.330e+07 ACC +5.002e+07  ACC +9.895e+00 +9.895e+00 KTC +8.674e-18
+   800 +3.309e+08 REJ +3.330e+07  ACC +9.895e+00
+   800 +3.309e+08 REJ +3.330e+07  ACC +9.895e+00
+   820 +4.347e+08 REJ +7.386e+07  ACC +9.895e+00
+   832 +4.071e+07 ACC +8.864e+07  ACC +9.895e+00 +9.895e+00 KTC +8.674e-18
+   840 +3.528e+08 REJ +4.071e+07  ACC +9.895e+00
+   860 +1.961e+08 REJ +4.885e+07  ACC +9.895e+00
+   880 +3.747e+08 REJ +1.069e+08  ACC +9.895e+00
+   900 +2.745e+08 REJ +1.667e+08  ACC +9.895e+00
+   900 +2.745e+08 REJ +1.667e+08  ACC +9.895e+00
+   906 +1.570e+08 ACC +1.667e+08  ACC +9.895e+00 +9.895e+00 KTC +2.134e-16
+   912 +1.057e+08 ACC +1.570e+08  ACC +9.895e+00 +9.895e+00 KTC +1.102e-15
+   915 +5.778e+07 ACC +1.057e+08  ACC +9.895e+00 +9.895e+00 KTC +9.905e-16
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   920 +5.101e+08 REJ +5.778e+07  ACC +9.895e+00
+   940 +2.970e+08 REJ +1.614e+08  ACC +9.895e+00
+   959 +8.961e+07 ACC +1.937e+08  ACC +9.895e+00 +9.895e+00 KTC +2.656e-15
+   960 +4.873e+08 REJ +8.961e+07  ACC +9.895e+00
+   980 +6.913e+08 REJ +8.961e+07  ACC +9.895e+00
+  1000 +2.099e+08 REJ +1.075e+08  ACC +9.895e+00
+  1000 +2.099e+08 REJ +1.075e+08  ACC +9.895e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Setting up first MIP
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               999.73500000000001
+CPXPARAM_Tune_TimeLimit                          199.947
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 17 rows and 43 columns.
+MIP Presolve modified 9 coefficients.
+Aggregator did 3 substitutions.
+Reduced MIP has 30 rows, 53 columns, and 125 nonzeros.
+Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (0.14 ticks)
+Found incumbent of value 4.6828805e+07 after 0.09 sec. (0.22 ticks)
+Probing fixed 1 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3 rows and 3 columns.
+Reduced MIP has 27 rows, 50 columns, and 110 nonzeros.
+Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.10 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 9.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Tried aggregator 1 time.
+LP Presolve eliminated 0 rows and 1 columns.
+Reduced LP has 27 rows, 49 columns, and 109 nonzeros.
+Presolve time = 0.00 sec. (0.02 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =             9.894737
+Initializing dual steep norms . . .
+Root relaxation solution time = 0.02 sec. (0.09 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       4.68288e+07        9.8947           100.00%
+Found incumbent of value 4.6828805e+07 after 0.11 sec. (0.48 ticks)
+*     0     0      integral     0       17.7272       17.7272       20    0.00%
+Elapsed time = 0.11 sec. (0.49 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 17.727202 after 0.11 sec. (0.49 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.11 sec. (0.49 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.11 sec. (0.49 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.11sec (det. 0.49 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               999.73500000000001
+CPXPARAM_Tune_TimeLimit                          199.947
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 27 rows and 57 columns.
+Aggregator did 2 substitutions.
+Reduced LP has 21 rows, 40 columns, and 71 nonzeros.
+Presolve time = 0.00 sec. (0.06 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =             9.894737
+Fixed MIP status(1): optimal
+Cplex Time: 0.00sec (det. 0.13 ticks)
+
+Proven optimal solution.
+
+MIP Solution:           17.727202    (20 iterations, 0 nodes)
+Final Solve:            17.727202    (20 iterations)
+
+Best possible:          17.727202
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 2
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =       1000 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +2.000e+01 INF +1.000e-03
+     0 +1.000e+30     -1.000e+30                  +2.000e+01 INF +1.000e-03
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.541e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC +4.062e+00 +4.062e+00 KTC +5.588e-15
+   220 +8.679e+07 REJ +6.257e+06  ACC +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   231 +3.218e+07 ACC +3.253e+07  ACC +4.062e+00 +4.062e+00 KTC +3.339e-15
+   240 +1.983e+07 ACC +3.218e+07  REJ +4.062e+00
+   260 +2.166e+08 REJ +1.102e+07  ACC +4.062e+00
+   280 +1.803e+07 REJ +4.093e+06  REJ +4.062e+00
+   300 +7.942e+07 REJ +1.803e+07  REJ +4.062e+00
+   300 +7.942e+07 REJ +1.803e+07  REJ +4.062e+00
+   320 +1.740e+08 REJ +2.564e+07  ACC +4.062e+00
+   326 +5.862e+06 ACC +2.564e+07  ACC +4.062e+00 +2.000e+01 INF +1.950e-02
+   334 +3.586e+06 ACC +5.862e+06  ACC +4.062e+00 +2.000e+01 INF +2.000e-02
+   340 +2.057e+07 REJ +3.586e+06  ACC +4.062e+00
+   360 +1.448e+08 REJ +4.303e+06  ACC +4.062e+00
+   380 +3.805e+07 REJ +3.699e+07  ACC +4.062e+00
+   385 +3.641e+07 ACC +3.699e+07  ACC +4.062e+00 +2.000e+01 INF +2.900e-02
+   396 +2.477e+07 ACC +3.641e+07  ACC +4.062e+00 +2.000e+01 INF +2.900e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   400 +2.474e+07 ACC +2.477e+07  ACC +4.062e+00 +2.000e+01 INF +1.950e-02
+   410 +1.102e+07 ACC +2.474e+07  ACC +4.062e+00 +1.636e-01 INF +1.000e+00
+   420 +1.083e+08 REJ +1.102e+07  ACC +4.062e+00
+   440 +1.353e+08 REJ +2.311e+07  ACC +4.062e+00
+   451 +2.113e+07 ACC +2.311e+07  ACC +4.062e+00 +2.000e+01 INF +2.000e-02
+   460 +8.413e+07 REJ +2.113e+07  ACC +4.062e+00
+   475 +2.652e+07 ACC +2.883e+07  ACC +4.062e+00 +4.062e+00 KTC +1.891e-16
+   480 +1.472e+08 REJ +2.652e+07  ACC +4.062e+00
+   486 +1.775e+07 ACC +2.652e+07  ACC +4.062e+00 +2.000e+01 INF +1.000e-03
+   498 +1.674e+07 ACC +1.775e+07  ACC +4.062e+00 +4.062e+00 KTC +3.017e-15
+   499 +1.626e+07 ACC +1.674e+07  ACC +4.062e+00 +4.062e+00 KTC +2.285e-15
+   500 +9.176e+07 REJ +1.626e+07  ACC +4.062e+00
+   500 +9.176e+07 REJ +1.626e+07  ACC +4.062e+00
+   520 +5.214e+07 REJ +1.626e+07  ACC +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   532 +1.925e+07 ACC +2.286e+07  ACC +4.062e+00 +4.062e+00 KTC +3.244e-16
+   540 +1.079e+08 REJ +1.925e+07  ACC +4.062e+00
+   551 +1.315e+07 ACC +1.925e+07  ACC +4.062e+00 +2.000e+01 INF +1.950e-02
+   560 +1.027e+08 REJ +1.315e+07  ACC +4.062e+00
+   572 +1.242e+07 ACC +1.315e+07  ACC +4.062e+00 +4.062e+00 KTC +2.168e-16
+   580 +7.812e+07 REJ +1.242e+07  ACC +4.062e+00
+   600 +5.340e+07 REJ +1.539e+07  ACC +4.062e+00
+   600 +5.340e+07 REJ +1.539e+07  ACC +4.062e+00
+   620 +9.283e+07 REJ +3.353e+07  ACC +4.062e+00
+   625 +3.277e+07 ACC +3.353e+07  ACC +4.062e+00 +4.062e+00 KTC +1.613e-16
+   640 +1.976e+07 ACC +3.277e+07  ACC +4.062e+00 +4.062e+00 KTC +1.101e-14
+   660 +1.316e+08 REJ +1.976e+07  ACC +4.062e+00
+   664 +1.886e+07 ACC +4.067e+07  ACC +4.062e+00 +2.000e+01 INF +2.000e-02
+   680 +1.221e+08 REJ +1.886e+07  ACC +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   700 +1.129e+08 REJ +2.321e+07  ACC +4.062e+00
+   700 +1.129e+08 REJ +2.321e+07  ACC +4.062e+00
+   720 +1.074e+08 REJ +2.785e+07  ACC +4.062e+00
+   725 +1.501e+07 ACC +2.785e+07  ACC +4.062e+00 +4.062e+00 KTC +1.405e-14
+   738 +6.175e+06 ACC +1.501e+07  ACC +4.062e+00 +2.000e+01 INF +1.950e-02
+   740 +7.841e+07 REJ +6.175e+06  ACC +4.062e+00
+   760 +7.261e+07 REJ +3.999e+07  ACC +4.062e+00
+   763 +3.262e+07 ACC +3.999e+07  ACC +4.062e+00 +2.000e+01 INF +2.900e-02
+   766 +2.455e+07 ACC +3.262e+07  ACC +4.062e+00 +2.000e+01 INF +1.000e-03
+   775 +1.112e+07 ACC +2.455e+07  ACC +4.062e+00 +2.000e+01 INF +2.000e-02
+   780 +9.902e+07 REJ +1.112e+07  ACC +4.062e+00
+   786 +8.013e+06 ACC +1.112e+07  ACC +4.062e+00 +2.000e+01 INF +1.000e-03
+   800 +7.824e+07 REJ +8.013e+06  ACC +4.062e+00
+   800 +7.824e+07 REJ +8.013e+06  ACC +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   820 +9.968e+07 REJ +1.738e+07  ACC +4.062e+00
+   832 +9.701e+06 ACC +2.086e+07  ACC +4.062e+00 +2.000e+01 INF +2.000e-02
+   840 +8.322e+07 REJ +9.701e+06  ACC +4.062e+00
+   860 +4.585e+07 REJ +1.164e+07  ACC +4.062e+00
+   880 +8.587e+07 REJ +2.207e+07  ACC +4.062e+00
+   900 +6.126e+07 REJ +3.860e+07  ACC +4.062e+00
+   900 +6.126e+07 REJ +3.860e+07  ACC +4.062e+00
+   906 +3.485e+07 ACC +3.860e+07  ACC +4.062e+00 +4.062e+00 KTC +5.958e-10
+   912 +2.486e+07 ACC +3.485e+07  ACC +4.062e+00 -0.000e+00 INF +1.008e+00
+   915 +1.371e+07 ACC +2.486e+07  ACC +4.062e+00 +2.000e+01 INF +1.095e-02
+   920 +1.184e+08 REJ +1.371e+07  ACC +4.062e+00
+   940 +6.555e+07 REJ +3.716e+07  ACC +4.062e+00
+   959 +1.862e+07 ACC +4.459e+07  ACC +4.062e+00 +4.062e+00 KTC +4.111e-16
+   960 +1.120e+08 REJ +1.862e+07  ACC +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   980 +1.554e+08 REJ +1.862e+07  ACC +4.062e+00
+   995 +2.416e+07 ACC +2.456e+07  ACC +4.062e+00 +4.062e+00 KTC +1.150e-14
+  1000 +4.769e+07 REJ +2.416e+07  ACC +4.062e+00
+  1000 +4.769e+07 REJ +2.416e+07  ACC +4.062e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999960
+CPXPARAM_TimeLimit                               999.09400000000005
+CPXPARAM_Tune_TimeLimit                          199.81880000000001
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 23 rows and 64 columns.
+MIP Presolve modified 17 coefficients.
+Aggregator did 5 substitutions.
+Reduced MIP has 46 rows, 70 columns, and 213 nonzeros.
+Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+Found incumbent of value 8.3044143e+07 after 0.00 sec. (0.36 ticks)
+Probing fixed 1 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 6 rows and 3 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 40 rows, 65 columns, and 182 nonzeros.
+Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.17 ticks)
+Probing time = 0.00 sec. (0.02 ticks)
+Clique table members: 10.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Tried aggregator 1 time.
+LP Presolve eliminated 0 rows and 3 columns.
+Reduced LP has 40 rows, 62 columns, and 179 nonzeros.
+Presolve time = 0.02 sec. (0.03 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             0.000000
+Initializing dual steep norms . . .
+Root relaxation solution time = 0.02 sec. (0.19 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       8.30441e+07                            ---
+Found incumbent of value 8.3044143e+07 after 0.02 sec. (0.82 ticks)
+*     0     0      integral     0       17.7272       17.7272       32    0.00%
+Elapsed time = 0.02 sec. (0.83 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 17.727202 after 0.02 sec. (0.83 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (0.84 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (0.84 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.02sec (det. 0.84 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999960
+CPXPARAM_TimeLimit                               999.09400000000005
+CPXPARAM_Tune_TimeLimit                          199.81880000000001
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 28 rows and 80 columns.
+Aggregator did 4 substitutions.
+Reduced LP has 42 rows, 61 columns, and 146 nonzeros.
+Presolve time = 0.00 sec. (0.10 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             9.894737
+Fixed MIP status(1): optimal
+Cplex Time: 0.02sec (det. 0.24 ticks)
+
+Proven optimal solution.
+
+MIP Solution:           17.727202    (32 iterations, 0 nodes)
+Final Solve:            17.727202    (27 iterations)
+
+Best possible:          17.727202
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 3
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        999 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30      +4.062e+00 +4.062e+00 KTC +2.137e-13
+     0 +1.000e+30     -1.000e+30      +4.062e+00 +4.062e+00 KTC +2.137e-13
+    20 +4.720e+07
+    40 +5.541e+07
+    60 +6.055e+06
+    80 +5.937e+07
+   100 +1.574e+08
+   120 +1.399e+08
+   140 +1.267e+08
+   160 +1.057e+08
+   180 +7.280e+07
+   200 +3.504e+08
+   200 +6.055e+06 ACC -1.000e+30  ACC +4.062e+00 +4.062e+00 KTC +3.635e-13
+   220 +4.368e+07 REJ +6.055e+06  REJ +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   240 +1.470e+08 REJ +1.003e+07  REJ +4.062e+00
+   260 +2.522e+08 REJ +1.512e+07  ACC +4.062e+00
+   280 +6.892e+07 REJ +1.512e+07  ACC +4.062e+00
+   300 +8.730e+07 REJ +2.120e+07  ACC +4.062e+00
+   300 +8.730e+07 REJ +2.120e+07  ACC +4.062e+00
+   320 +1.720e+08 REJ +1.248e+07  ACC +4.062e+00
+   340 +4.127e+07 REJ +3.755e+07  ACC +4.062e+00
+   360 +5.498e+07 REJ +4.843e+06  ACC +4.062e+00
+   380 +4.680e+07 REJ +1.797e+07  ACC +4.062e+00
+   394 +2.788e+07 ACC +3.908e+07  ACC +4.062e+00 +2.000e+01 INF +1.000e-03
+   400 +7.444e+07 REJ +2.788e+07  ACC +4.062e+00
+   400 +7.444e+07 REJ +2.788e+07  ACC +4.062e+00
+   420 +1.362e+08 REJ +3.639e+07  ACC +4.062e+00
+   427 +1.083e+07 ACC +3.639e+07  ACC +4.062e+00 +4.062e+00 KTC +2.173e-13
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   440 +6.367e+07 REJ +1.083e+07  REJ +4.062e+00
+   460 +6.943e+07 REJ +1.558e+07  ACC +4.062e+00
+   461 +9.357e+06 ACC +1.558e+07  ACC +4.062e+00 +4.062e+00 KTC +1.134e-09
+   480 +9.411e+07 REJ +9.357e+06  ACC +4.062e+00
+   487 +1.410e+07 ACC +2.544e+07  ACC +4.062e+00 +4.062e+00 KTC +2.171e-13
+   500 +1.370e+08 REJ +1.410e+07  ACC +4.062e+00
+   500 +1.370e+08 REJ +1.410e+07  ACC +4.062e+00
+   520 +1.260e+08 REJ +7.929e+06  REJ +4.062e+00
+   540 +8.890e+07 REJ +1.330e+07  REJ +4.062e+00
+   560 +9.491e+07 REJ +1.596e+07  REJ +4.062e+00
+   563 +1.315e+07 ACC +1.596e+07  ACC +4.062e+00 +9.900e-02 INF +2.000e+00
+   580 +1.158e+08 REJ +1.315e+07  ACC +4.062e+00
+   600 +1.020e+08 REJ +3.148e+07  ACC +4.062e+00
+   600 +1.020e+08 REJ +3.148e+07  ACC +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   614 +3.631e+07 ACC +3.777e+07  ACC +4.062e+00 +2.000e+01 INF +1.000e-03
+   620 +3.084e+07 ACC +3.631e+07  ACC +4.062e+00 +4.062e+00 KTC +2.191e-14
+   630 +2.002e+07 ACC +3.084e+07  ACC +4.062e+00 -0.000e+00 INF +1.010e+00
+   640 +1.404e+08 REJ +2.002e+07  ACC +4.062e+00
+   641 +8.842e+06 ACC +2.002e+07  ACC +4.062e+00 +2.000e+01 INF +3.659e-03
+   660 +5.139e+07 REJ +8.842e+06  ACC +4.062e+00
+   680 +1.148e+08 REJ +2.736e+07  ACC +4.062e+00
+   686 +4.753e+07 ACC +5.176e+07  ACC +4.062e+00 +4.062e+00 KTC +5.007e-13
+   700 +4.228e+07 REJ +2.804e+07  REJ +4.062e+00
+   700 +4.228e+07 REJ +2.804e+07  REJ +4.062e+00
+   720 +3.195e+07 ACC +3.208e+07  REJ +4.062e+00
+   740 +6.518e+07 REJ +1.493e+07  ACC +4.062e+00
+   760 +1.155e+08 REJ +1.493e+07  ACC +4.062e+00
+   780 +9.952e+07 REJ +2.815e+07  ACC +4.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   785 +1.799e+07 ACC +4.113e+07  ACC +4.062e+00 +4.062e+00 KTC +1.099e-12
+   800 +1.012e+08 REJ +1.456e+07  ACC +4.062e+00
+   800 +1.012e+08 REJ +1.456e+07  ACC +4.062e+00
+   820 +5.042e+07 REJ +2.510e+07  ACC +4.062e+00
+   840 +8.189e+07 REJ +1.842e+07  ACC +4.062e+00
+   860 +9.631e+07 REJ +1.289e+07  ACC +4.062e+00
+   880 +1.384e+08 REJ +1.547e+07  ACC +4.062e+00
+   900 +8.411e+07 REJ +1.547e+07  ACC +4.062e+00
+   900 +8.411e+07 REJ +1.547e+07  ACC +4.062e+00
+   920 +3.828e+07 REJ +2.956e+07  ACC +4.062e+00
+   940 +5.639e+07 REJ +3.548e+07  ACC +4.062e+00
+   944 +2.525e+07 ACC +4.257e+07  ACC +4.062e+00 +2.000e+01 INF +1.000e-03
+   960 +4.303e+07 REJ +2.525e+07  ACC +4.062e+00
+   965 +2.423e+07 ACC +2.525e+07  ACC +4.062e+00 +2.000e+01 INF +1.000e-03
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   980 +6.927e+07 REJ +2.423e+07  ACC +4.062e+00
+   992 +3.250e+07 ACC +4.450e+07  ACC +4.062e+00 +4.062e+00 KTC +2.689e-16
+  1000 +2.302e+07 ACC +3.250e+07  REJ +4.062e+00
+  1000 +2.302e+07 ACC +3.250e+07  REJ +4.062e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999901
+CPXPARAM_TimeLimit                               998.70300000000009
+CPXPARAM_Tune_TimeLimit                          199.74060000000003
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 25 rows and 64 columns.
+MIP Presolve modified 25 coefficients.
+Aggregator did 5 substitutions.
+Reduced MIP has 45 rows, 70 columns, and 211 nonzeros.
+Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.25 ticks)
+Found incumbent of value 8.3044143e+07 after 0.00 sec. (0.36 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 7 rows and 5 columns.
+Reduced MIP has 38 rows, 63 columns, and 169 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.15 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 5.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Tried aggregator 1 time.
+LP Presolve eliminated 0 rows and 3 columns.
+Reduced LP has 38 rows, 60 columns, and 166 nonzeros.
+Presolve time = 0.00 sec. (0.03 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             2.000000
+Iteration:     3   Dual objective     =             2.030941
+Initializing dual steep norms . . .
+Root relaxation solution time = 0.02 sec. (0.22 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       8.30441e+07                            ---
+Found incumbent of value 8.3044143e+07 after 0.02 sec. (0.82 ticks)
+      0     0     7557.1007     2   8.30441e+07     7557.1007       44   99.99%
+*     0+    0                        10454.2007     7557.1007            27.71%
+Found incumbent of value 10454.200681 after 0.02 sec. (0.90 ticks)
+*     0     0      integral     0     7557.1007     7557.1007       46    0.00%
+Elapsed time = 0.02 sec. (1.06 ticks, tree = 0.01 MB, solutions = 3)
+Found incumbent of value 7557.100726 after 0.02 sec. (1.06 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (1.07 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (1.07 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.11sec (det. 1.07 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999901
+CPXPARAM_TimeLimit                               998.70300000000009
+CPXPARAM_Tune_TimeLimit                          199.74060000000003
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 29 rows and 80 columns.
+Aggregator did 4 substitutions.
+Reduced LP has 42 rows, 61 columns, and 146 nonzeros.
+Presolve time = 0.00 sec. (0.10 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            19.789474
+Fixed MIP status(1): optimal
+Cplex Time: 0.02sec (det. 0.26 ticks)
+
+Proven optimal solution.
+
+MIP Solution:         7557.100726    (46 iterations, 0 nodes)
+Final Solve:          7557.100726    (32 iterations)
+
+Best possible:        7557.100726
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 4
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        999 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +3.000e+01 INF +2.000e-02
+     0 +1.000e+30     -1.000e+30                  +3.000e+01 INF +2.000e-02
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.541e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC             +6.946e+00 INF +1.000e-02
+   201 +1.578e+06 ACC +1.000e+30  ACC             +3.000e+01 INF +1.000e-03
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   202 +1.096e+06 ACC +1.578e+06  ACC             +3.000e+01 INF +2.000e-02
+   204 +1.023e+06 ACC +1.096e+06  ACC             +3.000e+01 INF +9.505e-02
+   205 +6.347e+05 ACC +1.023e+06  ACC             +6.946e+00 INF +1.000e-02
+   208 +4.623e+05 ACC +6.347e+05  ACC +3.315e+00 +3.315e+00 KTC +1.600e-14
+   213 +1.958e+07 ACC +2.523e+07  ACC +3.315e+00 +3.000e+01 INF +2.900e-02
+   220 +5.236e+07 REJ +1.958e+07  ACC +3.315e+00
+   231 +1.866e+07 ACC +1.958e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   240 +1.226e+07 ACC +1.866e+07  ACC +3.315e+00 +3.000e+01 INF +2.000e-02
+   248 +1.130e+07 ACC +1.226e+07  ACC +3.315e+00 +3.000e+01 INF +2.900e-02
+   251 +6.284e+06 ACC +1.130e+07  ACC +3.315e+00 +3.000e+01 INF +2.900e-02
+   260 +1.298e+08 REJ +6.284e+06  ACC +3.315e+00
+   271 +2.471e+06 ACC +6.284e+06  ACC +3.315e+00 +3.000e+01 INF +2.900e-02
+   280 +1.108e+07 REJ +2.471e+06  ACC +3.315e+00
+   300 +4.805e+07 REJ +1.108e+07  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   300 +4.805e+07 REJ +1.108e+07  ACC +3.315e+00
+   320 +1.071e+08 REJ +1.525e+07  ACC +3.315e+00
+   326 +3.560e+06 ACC +1.525e+07  ACC +3.315e+00 +3.000e+01 INF +1.000e-03
+   334 +2.241e+06 ACC +3.560e+06  ACC +3.315e+00 +3.000e+01 INF +2.000e-02
+   340 +1.231e+07 REJ +2.241e+06  ACC +3.315e+00
+   360 +8.794e+07 REJ +2.689e+06  ACC +3.315e+00
+   380 +2.227e+07 ACC +2.282e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   385 +2.183e+07 ACC +2.227e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   396 +1.530e+07 ACC +2.183e+07  ACC +3.315e+00 +3.000e+01 INF +1.095e-02
+   400 +1.451e+07 ACC +1.530e+07  ACC +3.315e+00 +3.000e+01 INF +9.976e-02
+   410 +6.856e+06 ACC +1.451e+07  ACC +3.315e+00 +2.685e+01 INF +1.010e+00
+   420 +6.324e+07 REJ +6.856e+06  ACC +3.315e+00
+   440 +7.930e+07 REJ +1.436e+07  ACC +3.315e+00
+   443 +1.333e+07 ACC +1.436e+07  ACC +3.315e+00 +3.000e+01 INF +9.976e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   451 +1.280e+07 ACC +1.333e+07  ACC +3.315e+00 +3.315e+00 KTC +1.702e-15
+   460 +5.060e+07 REJ +1.280e+07  ACC +3.315e+00
+   475 +1.595e+07 ACC +1.630e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   480 +8.395e+07 REJ +1.595e+07  ACC +3.315e+00
+   486 +1.021e+07 ACC +1.595e+07  ACC +3.315e+00 +3.000e+01 INF +9.505e-02
+   498 +9.299e+06 ACC +1.021e+07  ACC +3.315e+00 +3.000e+01 INF +2.000e-02
+   500 +5.562e+07 REJ +9.299e+06  ACC +3.315e+00
+   500 +5.562e+07 REJ +9.299e+06  ACC +3.315e+00
+   520 +2.927e+07 REJ +1.116e+07  ACC +3.315e+00
+   540 +6.350e+07 REJ +1.116e+07  ACC +3.315e+00
+   551 +7.616e+06 ACC +1.339e+07  ACC +3.315e+00 +3.315e+00 KTC +1.306e-14
+   560 +5.982e+07 REJ +7.616e+06  ACC +3.315e+00
+   572 +7.579e+06 ACC +7.616e+06  ACC +3.315e+00 +3.315e+00 KTC +1.167e-13
+   580 +4.879e+07 REJ +7.579e+06  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   600 +3.262e+07 REJ +9.135e+06  ACC +3.315e+00
+   600 +3.262e+07 REJ +9.135e+06  ACC +3.315e+00
+   620 +5.415e+07 REJ +2.050e+07  ACC +3.315e+00
+   625 +2.025e+07 ACC +2.050e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   640 +1.130e+07 ACC +2.025e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   660 +7.703e+07 REJ +1.130e+07  ACC +3.315e+00
+   664 +1.157e+07 ACC +2.399e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   680 +7.371e+07 REJ +1.157e+07  ACC +3.315e+00
+   700 +6.968e+07 REJ +1.389e+07  ACC +3.315e+00
+   700 +6.968e+07 REJ +1.389e+07  ACC +3.315e+00
+   720 +6.431e+07 REJ +1.680e+07  ACC +3.315e+00
+   725 +8.958e+06 ACC +1.680e+07  ACC +3.315e+00 +3.315e+00 KTC +2.238e-14
+   738 +3.807e+06 ACC +8.958e+06  ACC +3.315e+00 +3.000e+01 INF +9.505e-02
+   740 +4.636e+07 REJ +3.807e+06  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   760 +4.367e+07 REJ +2.418e+07  ACC +3.315e+00
+   763 +1.898e+07 ACC +2.418e+07  ACC +3.315e+00 +3.000e+01 INF +1.950e-02
+   766 +1.388e+07 ACC +1.898e+07  ACC +3.315e+00 +3.000e+01 INF +1.000e-03
+   775 +6.490e+06 ACC +1.388e+07  ACC +3.315e+00 +3.000e+01 INF +2.900e-02
+   780 +5.959e+07 REJ +6.490e+06  ACC +3.315e+00
+   786 +5.015e+06 ACC +6.490e+06  ACC +3.315e+00 +3.315e+00 KTC +1.985e-14
+   800 +4.862e+07 REJ +5.015e+06  ACC +3.315e+00
+   800 +4.862e+07 REJ +5.015e+06  ACC +3.315e+00
+   820 +5.911e+07 REJ +9.924e+06  ACC +3.315e+00
+   832 +5.992e+06 ACC +1.191e+07  ACC +3.315e+00 +3.315e+00 KTC +4.134e-14
+   840 +5.031e+07 REJ +5.992e+06  ACC +3.315e+00
+   860 +2.817e+07 REJ +7.191e+06  ACC +3.315e+00
+   880 +5.092e+07 REJ +1.196e+07  ACC +3.315e+00
+   900 +3.629e+07 REJ +2.356e+07  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   900 +3.629e+07 REJ +2.356e+07  ACC +3.315e+00
+   906 +2.037e+07 ACC +2.356e+07  ACC +3.315e+00 +3.000e+01 INF +4.988e-03
+   912 +1.539e+07 ACC +2.037e+07  ACC +3.315e+00 +3.012e-03 INF +1.000e+00
+   915 +8.507e+06 ACC +1.539e+07  ACC +3.315e+00 +3.000e+01 INF +1.100e-02
+   920 +7.269e+07 REJ +8.507e+06  ACC +3.315e+00
+   940 +3.772e+07 REJ +2.167e+07  ACC +3.315e+00
+   959 +1.040e+07 ACC +2.601e+07  ACC +3.315e+00 +3.000e+01 INF +2.000e-02
+   960 +6.830e+07 REJ +1.040e+07  ACC +3.315e+00
+   980 +8.980e+07 REJ +1.040e+07  ACC +3.315e+00
+   995 +1.408e+07 ACC +1.434e+07  ACC +3.315e+00 +3.315e+00 KTC +4.249e-14
+  1000 +2.681e+07 REJ +1.408e+07  ACC +3.315e+00
+  1000 +2.681e+07 REJ +1.408e+07  ACC +3.315e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999823
+CPXPARAM_TimeLimit                               997.93700000000013
+CPXPARAM_Tune_TimeLimit                          199.58740000000003
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 26 rows and 86 columns.
+MIP Presolve modified 34 coefficients.
+Aggregator did 7 substitutions.
+Reduced MIP has 66 rows, 91 columns, and 307 nonzeros.
+Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.33 ticks)
+Found incumbent of value 9.9333243e+07 after 0.00 sec. (0.49 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 8 rows and 5 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 58 rows, 84 columns, and 256 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.22 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 5.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             0.000000
+Iteration:    63   Dual objective     =         25067.047816
+Root relaxation solution time = 0.02 sec. (0.40 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       9.93332e+07                            ---
+Found incumbent of value 9.9333243e+07 after 0.02 sec. (1.22 ticks)
+*     0     0      integral     0    26452.2640    26452.2640       65    0.00%
+Elapsed time = 0.02 sec. (1.24 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 26452.264041 after 0.02 sec. (1.24 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (1.24 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (1.24 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.11sec (det. 1.25 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999823
+CPXPARAM_TimeLimit                               997.93700000000013
+CPXPARAM_Tune_TimeLimit                          199.58740000000003
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 31 rows and 103 columns.
+Aggregator did 6 substitutions.
+Reduced LP has 62 rows, 82 columns, and 226 nonzeros.
+Presolve time = 0.00 sec. (0.15 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            29.684211
+Fixed MIP status(1): optimal
+Cplex Time: 0.02sec (det. 0.40 ticks)
+
+Proven optimal solution.
+
+MIP Solution:        26452.264041    (65 iterations, 0 nodes)
+Final Solve:         26452.264041    (43 iterations)
+
+Best possible:       26452.264041
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 5
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        998 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +4.877e+00 INF +1.000e-02
+     0 +1.000e+30     -1.000e+30                  +4.877e+00 INF +1.000e-02
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.540e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC             +4.000e+01 INF +9.999e-02
+   201 +1.578e+06 ACC +1.000e+30  ACC             +4.000e+01 INF +2.900e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   202 +1.096e+06 ACC +1.578e+06  ACC             +4.000e+01 INF +1.140e-01
+   204 +1.023e+06 ACC +1.096e+06  ACC             +4.000e+01 INF +1.230e-01
+   205 +6.347e+05 ACC +1.023e+06  ACC             +4.000e+01 INF +8.500e-03
+   208 +4.623e+05 ACC +6.347e+05  ACC             +1.906e+00 INF +1.305e+00
+   213 +3.731e+05 ACC +4.623e+05  ACC             +4.000e+01 INF +1.095e-02
+   220 +9.543e+05 REJ +3.731e+05  ACC
+   221 +3.635e+05 ACC +3.731e+05  ACC             -0.000e+00 INF +2.000e+00
+   240 +2.228e+05 ACC +3.635e+05  ACC             +4.000e+01 INF +2.900e-02
+   248 +2.107e+05 ACC +2.228e+05  ACC             +6.661e-16 INF +2.000e+00
+   251 +1.214e+05 ACC +2.107e+05  ACC             +4.000e+01 INF +2.900e-02
+   260 +2.280e+06 REJ +1.214e+05  ACC
+   271 +5.296e+04 ACC +1.214e+05  ACC             +4.000e+01 INF +9.505e-02
+   280 +1.982e+05 REJ +5.296e+04  ACC
+   300 +8.588e+05 REJ +1.982e+05  ACC
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   300 +8.588e+05 REJ +1.982e+05  ACC
+   320 +1.843e+06 REJ +2.800e+05  ACC
+   326 +7.931e+04 ACC +2.800e+05  ACC             +4.000e+01 INF +5.087e-02
+   334 +4.652e+04 ACC +7.931e+04  ACC             +9.261e+00 INF +1.000e-02
+   340 +2.356e+05 REJ +4.652e+04  ACC
+   360 +1.548e+06 REJ +5.582e+04  ACC
+   380 +4.377e+05 REJ +3.963e+05  ACC
+   385 +3.914e+05 ACC +3.963e+05  ACC             +4.000e+01 INF +2.000e-02
+   396 +2.675e+05 ACC +3.914e+05  ACC             +4.000e+01 INF +1.901e-01
+   400 +2.817e+05 REJ +2.675e+05  ACC
+   400 +2.817e+05 REJ +2.675e+05  ACC
+   410 +1.200e+05 ACC +2.675e+05  ACC             +3.483e+00 INF +1.010e+00
+   420 +1.235e+06 REJ +1.200e+05  ACC
+   440 +1.471e+06 REJ +2.594e+05  ACC
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   443 +2.578e+05 ACC +2.594e+05  ACC             +4.000e+01 INF +4.999e-03
+   451 +2.315e+05 ACC +2.578e+05  ACC             +9.261e+00 INF +1.000e-02
+   460 +9.044e+05 REJ +2.315e+05  ACC
+   475 +3.061e+05 ACC +3.440e+05  ACC             +4.000e+01 INF +1.000e-03
+   480 +1.564e+06 REJ +3.061e+05  ACC
+   486 +1.956e+05 ACC +3.061e+05  ACC             +4.000e+01 INF +2.900e-02
+   498 +1.905e+05 ACC +1.956e+05  ACC             +4.877e+00 INF +1.000e-02
+   499 +1.801e+05 ACC +1.905e+05  ACC +3.134e+00 +3.134e+00 KTC +6.371e-14
+   500 +4.301e+07 REJ +7.042e+06  ACC +3.134e+00
+   500 +4.301e+07 REJ +7.042e+06  ACC +3.134e+00
+   520 +2.099e+07 REJ +7.042e+06  ACC +3.134e+00
+   532 +8.594e+06 ACC +1.011e+07  ACC +3.134e+00 +3.134e+00 KTC +1.632e-15
+   540 +4.677e+07 REJ +8.594e+06  ACC +3.134e+00
+   551 +5.527e+06 ACC +8.594e+06  ACC +3.134e+00 +4.000e+01 INF +1.950e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   560 +4.392e+07 REJ +5.527e+06  ACC +3.134e+00
+   580 +3.723e+07 REJ +1.108e+07  ACC +3.134e+00
+   587 +6.942e+06 ACC +1.108e+07  ACC +3.134e+00 +4.877e+00 INF +1.000e-02
+   600 +2.475e+07 REJ +6.942e+06  ACC +3.134e+00
+   600 +2.475e+07 REJ +6.942e+06  ACC +3.134e+00
+   620 +3.814e+07 REJ +1.052e+07  ACC +3.134e+00
+   640 +8.162e+06 ACC +1.564e+07  ACC +3.134e+00 +4.000e+01 INF +1.095e-02
+   660 +5.573e+07 REJ +8.162e+06  ACC +3.134e+00
+   664 +9.029e+06 ACC +1.763e+07  ACC +3.134e+00 +4.000e+01 INF +1.000e-03
+   680 +5.489e+07 REJ +9.029e+06  ACC +3.134e+00
+   700 +5.356e+07 REJ +1.083e+07  ACC +3.134e+00
+   700 +5.356e+07 REJ +1.083e+07  ACC +3.134e+00
+   720 +4.939e+07 REJ +1.300e+07  ACC +3.134e+00
+   725 +6.619e+06 ACC +1.300e+07  ACC +3.134e+00 +9.261e+00 INF +1.000e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   738 +2.779e+06 ACC +6.619e+06  ACC +3.134e+00 +3.134e+00 KTC +8.009e-15
+   740 +3.509e+07 REJ +2.779e+06  ACC +3.134e+00
+   760 +3.129e+07 REJ +1.725e+07  ACC +3.134e+00
+   763 +1.391e+07 ACC +1.725e+07  ACC +3.134e+00 +4.000e+01 INF +2.000e-02
+   766 +9.889e+06 ACC +1.391e+07  ACC +3.134e+00 +4.000e+01 INF +1.950e-02
+   775 +4.860e+06 ACC +9.889e+06  ACC +3.134e+00 +4.000e+01 INF +4.999e-03
+   780 +4.281e+07 REJ +4.860e+06  ACC +3.134e+00
+   786 +3.857e+06 ACC +4.860e+06  ACC +3.134e+00 +3.134e+00 KTC +4.042e-14
+   800 +3.444e+07 REJ +3.857e+06  ACC +3.134e+00
+   800 +3.444e+07 REJ +3.857e+06  ACC +3.134e+00
+   820 +4.251e+07 REJ +7.098e+06  ACC +3.134e+00
+   832 +4.501e+06 ACC +8.517e+06  ACC +3.134e+00 +3.134e+00 KTC +1.267e-14
+   840 +3.900e+07 REJ +4.501e+06  ACC +3.134e+00
+   860 +2.191e+07 REJ +5.401e+06  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   880 +3.828e+07 REJ +8.401e+06  ACC +3.134e+00
+   900 +2.699e+07 REJ +1.663e+07  ACC +3.134e+00
+   900 +2.699e+07 REJ +1.663e+07  ACC +3.134e+00
+   906 +1.470e+07 ACC +1.663e+07  ACC +3.134e+00 +4.000e+01 INF +3.000e-03
+   912 +1.208e+07 ACC +1.470e+07  ACC +3.134e+00 +4.000e+01 INF +9.976e-02
+   915 +6.348e+06 ACC +1.208e+07  ACC +3.134e+00 +4.000e+01 INF +4.987e-03
+   920 +5.443e+07 REJ +6.348e+06  ACC +3.134e+00
+   940 +2.659e+07 REJ +1.594e+07  ACC +3.134e+00
+   959 +7.457e+06 ACC +1.913e+07  ACC +3.134e+00 +3.134e+00 KTC +1.424e-15
+   960 +5.074e+07 REJ +7.457e+06  ACC +3.134e+00
+   980 +6.330e+07 REJ +7.457e+06  ACC +3.134e+00
+   995 +9.898e+06 ACC +1.064e+07  ACC +3.134e+00 +3.134e+00 KTC +2.586e-14
+  1000 +1.928e+07 REJ +9.898e+06  ACC +3.134e+00
+  1000 +1.928e+07 REJ +9.898e+06  ACC +3.134e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999715
+CPXPARAM_TimeLimit                               997.28100000000018
+CPXPARAM_Tune_TimeLimit                          199.45620000000002
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 27 rows and 107 columns.
+MIP Presolve modified 42 coefficients.
+Aggregator did 9 substitutions.
+Reduced MIP has 87 rows, 113 columns, and 424 nonzeros.
+Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.45 ticks)
+Found incumbent of value 1.0673425e+08 after 0.02 sec. (0.65 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 7 rows and 5 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 80 rows, 106 columns, and 369 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (0.31 ticks)
+Probing time = 0.00 sec. (0.02 ticks)
+Clique table members: 8.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             0.000000
+Iteration:    63   Dual objective     =         12542.072531
+Root relaxation solution time = 0.00 sec. (0.59 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.06734e+08                            ---
+Found incumbent of value 1.0673425e+08 after 0.03 sec. (1.70 ticks)
+*     0     0      integral     0    44543.9233    44543.9233       87    0.00%
+Elapsed time = 0.03 sec. (1.72 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 44543.923262 after 0.03 sec. (1.72 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.03 sec. (1.73 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.03 sec. (1.73 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.13sec (det. 1.73 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999715
+CPXPARAM_TimeLimit                               997.28100000000018
+CPXPARAM_Tune_TimeLimit                          199.45620000000002
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 32 rows and 125 columns.
+Aggregator did 8 substitutions.
+Reduced LP has 83 rows, 104 columns, and 315 nonzeros.
+Presolve time = 0.00 sec. (0.19 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            39.578947
+Fixed MIP status(1): optimal
+Cplex Time: 0.01sec (det. 0.57 ticks)
+
+Proven optimal solution.
+
+MIP Solution:        44543.923262    (87 iterations, 0 nodes)
+Final Solve:         44543.923262    (53 iterations)
+
+Best possible:       44543.923262
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 6
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        997 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +1.158e+01 INF +1.000e-02
+     0 +1.000e+30     -1.000e+30                  +1.158e+01 INF +1.000e-02
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.540e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC +3.130e+00 +3.130e+00 KTC +4.111e-14
+   220 +3.545e+07 REJ +2.293e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   231 +1.132e+07 ACC +1.141e+07  ACC +3.130e+00 +1.158e+01 INF +4.319e-03
+   240 +7.165e+06 ACC +1.132e+07  ACC +3.130e+00 +5.000e+01 INF +1.141e+00
+   248 +6.839e+06 ACC +7.165e+06  ACC +3.130e+00 +5.000e+01 INF +1.397e-01
+   251 +3.596e+06 ACC +6.839e+06  ACC +3.130e+00 +1.023e+01 INF +4.887e-03
+   260 +8.584e+07 REJ +3.596e+06  ACC +3.130e+00
+   271 +1.547e+06 ACC +3.596e+06  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   280 +6.598e+06 REJ +1.547e+06  ACC +3.130e+00
+   300 +2.996e+07 REJ +6.598e+06  ACC +3.130e+00
+   300 +2.996e+07 REJ +6.598e+06  ACC +3.130e+00
+   320 +6.387e+07 REJ +9.611e+06  ACC +3.130e+00
+   322 +9.465e+06 ACC +9.611e+06  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   326 +2.242e+06 ACC +9.465e+06  ACC +3.130e+00 +5.000e+01 INF +9.600e-02
+   334 +1.436e+06 ACC +2.242e+06  ACC +3.130e+00 +3.130e+00 KTC +6.939e-16
+   340 +7.813e+06 REJ +1.436e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   360 +5.904e+07 REJ +1.723e+06  ACC +3.130e+00
+   380 +1.311e+07 ACC +1.312e+07  ACC +3.130e+00 +4.572e+00 INF +1.597e+00
+   396 +8.739e+06 ACC +1.311e+07  ACC +3.130e+00 +5.000e+01 INF +1.095e-02
+   400 +8.431e+06 ACC +8.739e+06  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   410 +4.738e+06 ACC +8.431e+06  ACC +3.130e+00 -0.000e+00 INF +2.000e+00
+   420 +4.161e+07 REJ +4.738e+06  ACC +3.130e+00
+   440 +4.762e+07 REJ +8.332e+06  ACC +3.130e+00
+   443 +7.744e+06 ACC +8.332e+06  ACC +3.130e+00 +5.000e+01 INF +5.099e-02
+   460 +2.982e+07 REJ +7.744e+06  ACC +3.130e+00
+   480 +4.924e+07 REJ +9.293e+06  ACC +3.130e+00
+   486 +6.169e+06 ACC +1.115e+07  ACC +3.130e+00 +3.130e+00 KTC +5.017e-10
+   498 +5.229e+06 ACC +6.169e+06  ACC +3.130e+00 +5.000e+01 INF +9.976e-02
+   500 +3.737e+07 REJ +5.229e+06  ACC +3.130e+00
+   500 +3.737e+07 REJ +5.229e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   520 +1.707e+07 REJ +6.275e+06  ACC +3.130e+00
+   540 +3.807e+07 REJ +6.275e+06  ACC +3.130e+00
+   551 +4.498e+06 ACC +7.530e+06  ACC +3.130e+00 +3.130e+00 KTC +2.887e-15
+   560 +3.445e+07 REJ +4.498e+06  ACC +3.130e+00
+   572 +4.471e+06 ACC +4.498e+06  ACC +3.130e+00 +5.000e+01 INF +2.100e-02
+   580 +3.040e+07 REJ +4.471e+06  ACC +3.130e+00
+   600 +1.980e+07 REJ +6.032e+06  ACC +3.130e+00
+   600 +1.980e+07 REJ +6.032e+06  ACC +3.130e+00
+   620 +3.006e+07 REJ +1.153e+07  ACC +3.130e+00
+   640 +6.455e+06 ACC +1.383e+07  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   660 +4.341e+07 REJ +6.455e+06  ACC +3.130e+00
+   664 +7.966e+06 ACC +1.398e+07  ACC +3.130e+00 +4.256e+00 INF +1.000e-02
+   680 +4.587e+07 REJ +7.966e+06  ACC +3.130e+00
+   700 +4.141e+07 REJ +9.559e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   700 +4.141e+07 REJ +9.559e+06  ACC +3.130e+00
+   720 +4.026e+07 REJ +1.147e+07  ACC +3.130e+00
+   725 +5.551e+06 ACC +1.147e+07  ACC +3.130e+00 +1.158e+01 INF +1.000e-02
+   738 +2.262e+06 ACC +5.551e+06  ACC +3.130e+00 +5.000e+01 INF +5.000e-03
+   740 +2.928e+07 REJ +2.262e+06  ACC +3.130e+00
+   760 +2.514e+07 REJ +1.388e+07  ACC +3.130e+00
+   763 +1.109e+07 ACC +1.388e+07  ACC +3.130e+00 +5.000e+01 INF +2.900e-02
+   766 +8.021e+06 ACC +1.109e+07  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   775 +4.280e+06 ACC +8.021e+06  ACC +3.130e+00 +1.158e+01 INF +4.319e-03
+   780 +3.374e+07 REJ +4.280e+06  ACC +3.130e+00
+   786 +3.295e+06 ACC +4.280e+06  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   800 +2.745e+07 REJ +3.295e+06  ACC +3.130e+00
+   800 +2.745e+07 REJ +3.295e+06  ACC +3.130e+00
+   820 +3.439e+07 REJ +5.643e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   832 +3.731e+06 ACC +6.771e+06  ACC +3.130e+00 +4.932e+01 INF +5.000e-02
+   840 +3.310e+07 REJ +3.731e+06  ACC +3.130e+00
+   860 +1.900e+07 REJ +4.478e+06  ACC +3.130e+00
+   880 +3.203e+07 REJ +7.224e+06  ACC +3.130e+00
+   900 +2.224e+07 REJ +1.391e+07  ACC +3.130e+00
+   900 +2.224e+07 REJ +1.391e+07  ACC +3.130e+00
+   906 +1.187e+07 ACC +1.391e+07  ACC +3.130e+00 +5.000e+01 INF +5.087e-02
+   912 +1.061e+07 ACC +1.187e+07  ACC +3.130e+00 -0.000e+00 INF +2.000e+00
+   915 +5.314e+06 ACC +1.061e+07  ACC +3.130e+00 +5.000e+01 INF +9.505e-02
+   920 +4.577e+07 REJ +5.314e+06  ACC +3.130e+00
+   940 +2.144e+07 REJ +1.309e+07  ACC +3.130e+00
+   959 +6.330e+06 ACC +1.571e+07  ACC +3.130e+00 +3.130e+00 KTC +7.494e-16
+   960 +3.947e+07 REJ +6.330e+06  ACC +3.130e+00
+   980 +5.114e+07 REJ +6.330e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   995 +8.118e+06 ACC +8.526e+06  ACC +3.130e+00 +5.570e+00 INF +8.977e-03
+  1000 +1.555e+07 REJ +8.118e+06  ACC +3.130e+00
+  1000 +1.555e+07 REJ +8.118e+06  ACC +3.130e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999575
+CPXPARAM_TimeLimit                               996.61000000000024
+CPXPARAM_Tune_TimeLimit                          199.32200000000006
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 32 rows and 128 columns.
+MIP Presolve modified 52 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 103 rows, 130 columns, and 504 nonzeros.
+Reduced MIP has 9 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.54 ticks)
+Found incumbent of value 1.0837712e+08 after 0.00 sec. (0.77 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 9 rows and 5 columns.
+Reduced MIP has 94 rows, 121 columns, and 435 nonzeros.
+Reduced MIP has 7 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.34 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 6.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             0.000000
+Iteration:    63   Dual objective     =        786304.372812
+Root relaxation solution time = 0.00 sec. (0.60 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.08377e+08                            ---
+Found incumbent of value 1.0837712e+08 after 0.00 sec. (1.87 ticks)
+      0     0   859604.3530     5   1.08377e+08   859604.3530       88   99.21%
+*     0+    0                       876480.1884   859604.3530             1.93%
+Found incumbent of value 876480.188372 after 0.02 sec. (2.08 ticks)
+      0     0   870933.5801     2   876480.1884       Cuts: 5       93    0.63%
+      0     0   871045.0488     2   876480.1884    MIRcuts: 1       95    0.62%
+      0     1   871045.0488     2   876480.1884   873327.7512       95    0.36%
+Elapsed time = 0.02 sec. (5.27 ticks, tree = 0.01 MB, solutions = 2)
+
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  3
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (5.27 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.08 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (5.35 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.03sec (det. 5.35 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999575
+CPXPARAM_TimeLimit                               996.61000000000024
+CPXPARAM_Tune_TimeLimit                          199.32200000000006
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 29 rows and 146 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 108 rows, 127 columns, and 419 nonzeros.
+Presolve time = 0.00 sec. (0.24 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            19.789474
+Fixed MIP status(1): optimal
+Cplex Time: 0.00sec (det. 0.72 ticks)
+
+Proven optimal solution.
+
+MIP Solution:       876480.188372    (103 iterations, 3 nodes)
+Final Solve:        876480.188372    (62 iterations)
+
+Best possible:      876480.188372
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 7
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        997 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +3.000e+01 INF +1.950e-02
+     0 +1.000e+30     -1.000e+30                  +3.000e+01 INF +1.950e-02
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.541e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC             +3.000e+01 INF +1.010e+00
+   201 +1.578e+06 ACC +1.000e+30  ACC +3.315e+00 +3.315e+00 KTC +3.958e-13
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   202 +6.025e+07 ACC +9.266e+07  ACC +3.315e+00 +3.000e+01 INF +3.695e-03
+   204 +5.525e+07 ACC +6.025e+07  ACC +3.315e+00 +3.000e+01 INF +9.976e-02
+   205 +3.370e+07 ACC +5.525e+07  ACC +3.315e+00 +3.000e+01 INF +1.901e-01
+   208 +2.524e+07 ACC +3.370e+07  ACC +3.315e+00 +3.000e+01 INF +9.505e-02
+   213 +1.958e+07 ACC +2.524e+07  ACC +3.315e+00 +3.000e+01 INF +2.000e-02
+   220 +5.236e+07 REJ +1.958e+07  ACC +3.315e+00
+   231 +1.866e+07 ACC +1.958e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   240 +1.226e+07 ACC +1.866e+07  ACC +3.315e+00 +3.000e+01 INF +1.100e-02
+   248 +1.130e+07 ACC +1.226e+07  ACC +3.315e+00 +3.000e+01 INF +1.208e+00
+   251 +6.285e+06 ACC +1.130e+07  ACC +3.315e+00 +3.000e+01 INF +1.000e-03
+   260 +1.298e+08 REJ +6.285e+06  ACC +3.315e+00
+   271 +2.471e+06 ACC +6.285e+06  ACC +3.315e+00 +1.131e+01 INF +2.652e-03
+   280 +1.108e+07 REJ +2.471e+06  ACC +3.315e+00
+   300 +4.806e+07 REJ +1.108e+07  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   300 +4.806e+07 REJ +1.108e+07  ACC +3.315e+00
+   320 +1.071e+08 REJ +1.525e+07  ACC +3.315e+00
+   326 +3.560e+06 ACC +1.525e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+   334 +2.242e+06 ACC +3.560e+06  ACC +3.315e+00 +3.000e+01 INF +9.505e-02
+   340 +1.231e+07 REJ +2.242e+06  ACC +3.315e+00
+   360 +8.794e+07 REJ +2.691e+06  ACC +3.315e+00
+   380 +2.227e+07 ACC +2.282e+07  ACC +3.315e+00 +3.315e+00 KTC +9.718e-13
+   400 +1.451e+07 ACC +1.530e+07  REJ +3.315e+00
+   400 +1.451e+07 ACC +1.530e+07  REJ +3.315e+00
+   420 +6.324e+07 REJ +6.856e+06  ACC +3.315e+00
+   440 +7.930e+07 REJ +1.436e+07  ACC +3.315e+00
+   460 +5.060e+07 REJ +1.280e+07  REJ +3.315e+00
+   475 +1.595e+07 ACC +1.630e+07  ACC +3.315e+00 +7.780e+00 INF +1.000e-02
+   480 +8.395e+07 REJ +1.595e+07  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   486 +1.021e+07 ACC +1.595e+07  ACC +3.315e+00 +3.315e+00 KTC +1.072e-13
+   500 +5.562e+07 REJ +9.300e+06  ACC +3.315e+00
+   500 +5.562e+07 REJ +9.300e+06  ACC +3.315e+00
+   520 +2.927e+07 REJ +1.116e+07  ACC +3.315e+00
+   540 +6.350e+07 REJ +1.116e+07  ACC +3.315e+00
+   560 +5.982e+07 REJ +7.617e+06  ACC +3.315e+00
+   572 +7.581e+06 ACC +7.617e+06  ACC +3.315e+00 +1.506e+00 INF +1.000e+00
+   580 +4.879e+07 REJ +7.581e+06  ACC +3.315e+00
+   600 +3.262e+07 REJ +9.135e+06  ACC +3.315e+00
+   600 +3.262e+07 REJ +9.135e+06  ACC +3.315e+00
+   620 +5.415e+07 REJ +2.050e+07  ACC +3.315e+00
+   625 +2.025e+07 ACC +2.050e+07  ACC +3.315e+00 +3.315e+00 KTC +2.588e-14
+   640 +1.130e+07 ACC +2.025e+07  ACC +3.315e+00 +1.292e+01 INF +1.000e-02
+   660 +7.703e+07 REJ +1.130e+07  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   664 +1.157e+07 ACC +2.399e+07  ACC +3.315e+00 +1.008e+01 INF +1.000e-02
+   680 +7.371e+07 REJ +1.157e+07  ACC +3.315e+00
+   700 +6.968e+07 REJ +1.389e+07  ACC +3.315e+00
+   700 +6.968e+07 REJ +1.389e+07  ACC +3.315e+00
+   720 +6.431e+07 REJ +1.680e+07  ACC +3.315e+00
+   725 +8.960e+06 ACC +1.680e+07  ACC +3.315e+00 +3.315e+00 KTC +4.372e-14
+   740 +4.636e+07 REJ +3.806e+06  REJ +3.315e+00
+   760 +4.367e+07 REJ +2.418e+07  REJ +3.315e+00
+   766 +1.388e+07 ACC +1.898e+07  ACC +3.315e+00 +3.000e+01 INF +2.000e-02
+   775 +6.492e+06 ACC +1.388e+07  ACC +3.315e+00 +3.000e+01 INF +9.505e-02
+   780 +5.959e+07 REJ +6.492e+06  ACC +3.315e+00
+   786 +5.016e+06 ACC +6.492e+06  ACC +3.315e+00 +3.315e+00 KTC +4.020e-10
+   800 +4.862e+07 REJ +5.016e+06  ACC +3.315e+00
+   800 +4.862e+07 REJ +5.016e+06  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   820 +5.911e+07 REJ +9.925e+06  ACC +3.315e+00
+   832 +5.993e+06 ACC +1.191e+07  ACC +3.315e+00 +3.000e+01 INF +1.950e-02
+   840 +5.031e+07 REJ +5.993e+06  ACC +3.315e+00
+   860 +2.817e+07 REJ +7.191e+06  ACC +3.315e+00
+   880 +5.092e+07 REJ +1.196e+07  ACC +3.315e+00
+   900 +3.629e+07 REJ +2.356e+07  ACC +3.315e+00
+   900 +3.629e+07 REJ +2.356e+07  ACC +3.315e+00
+   906 +2.037e+07 ACC +2.356e+07  ACC +3.315e+00 +3.000e+01 INF +2.900e-02
+   912 +1.539e+07 ACC +2.037e+07  ACC +3.315e+00 +1.295e+01 INF +1.000e-02
+   915 +8.505e+06 ACC +1.539e+07  ACC +3.315e+00 +1.346e+01 INF +2.229e-03
+   920 +7.269e+07 REJ +8.505e+06  ACC +3.315e+00
+   940 +3.772e+07 REJ +2.167e+07  ACC +3.315e+00
+   959 +1.040e+07 ACC +2.601e+07  ACC +3.315e+00 +3.000e+01 INF +2.000e-02
+   960 +6.830e+07 REJ +1.040e+07  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   980 +8.980e+07 REJ +1.040e+07  ACC +3.315e+00
+   995 +1.408e+07 ACC +1.435e+07  ACC +3.315e+00 +6.946e+00 INF +1.000e-02
+  1000 +2.681e+07 REJ +1.408e+07  ACC +3.315e+00
+  1000 +2.681e+07 REJ +1.408e+07  ACC +3.315e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999410
+CPXPARAM_TimeLimit                               996.0780000000002
+CPXPARAM_Tune_TimeLimit                          199.21560000000005
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 33 rows and 128 columns.
+MIP Presolve modified 61 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 103 rows, 130 columns, and 505 nonzeros.
+Reduced MIP has 9 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.54 ticks)
+Found incumbent of value 1.0837712e+08 after 0.00 sec. (0.78 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 9 rows and 5 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 94 rows, 121 columns, and 436 nonzeros.
+Reduced MIP has 7 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.36 ticks)
+Probing time = 0.00 sec. (0.02 ticks)
+Clique table members: 7.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             0.000000
+Iteration:    63   Dual objective     =        755667.239485
+Root relaxation solution time = 0.00 sec. (0.68 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.08377e+08                            ---
+Found incumbent of value 1.0837712e+08 after 0.02 sec. (1.98 ticks)
+      0     0   871620.3305     5   1.08377e+08   871620.3305       97   99.20%
+*     0+    0                       912205.0524   871620.3305             4.45%
+Found incumbent of value 912205.052417 after 0.02 sec. (2.30 ticks)
+      0     0   878372.4657     5   912205.0524       Cuts: 5      108    3.71%
+*     0+    0                       887697.0076   878372.4657             1.05%
+Found incumbent of value 887697.007599 after 0.02 sec. (3.18 ticks)
+      0     0   878850.7266     5   887697.0076       Cuts: 2      112    1.00%
+      0     0   879194.5182     5   887697.0076   Flowcuts: 1      113    0.96%
+      0     2   879194.5182     5   887697.0076   879351.5887      113    0.94%
+Elapsed time = 0.03 sec. (6.24 ticks, tree = 0.01 MB, solutions = 3)
+
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  3
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.03 sec. (6.25 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.19 ticks)
+                          ------------
+Total (root+branch&cut) =    0.03 sec. (6.43 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.03sec (det. 6.43 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999410
+CPXPARAM_TimeLimit                               996.0780000000002
+CPXPARAM_Tune_TimeLimit                          199.21560000000005
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 31 rows and 146 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 107 rows, 127 columns, and 417 nonzeros.
+Presolve time = 0.00 sec. (0.24 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            29.684211
+Iteration:    63   Dual objective     =        880709.717434
+Fixed MIP status(1): optimal
+Cplex Time: 0.00sec (det. 0.78 ticks)
+
+Proven optimal solution.
+
+MIP Solution:       887697.007599    (137 iterations, 3 nodes)
+Final Solve:        887697.007599    (69 iterations)
+
+Best possible:      887697.007599
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 8
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        996 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +1.028e+01 INF +1.000e-02
+     0 +1.000e+30     -1.000e+30                  +1.028e+01 INF +1.000e-02
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.541e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC +3.134e+00 +3.134e+00 KTC +1.958e-13
+   220 +4.022e+07 REJ +2.769e+06  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   231 +1.361e+07 ACC +1.445e+07  ACC +3.134e+00 +3.134e+00 KTC +1.716e-13
+   240 +9.194e+06 ACC +1.361e+07  REJ +3.134e+00
+   260 +9.947e+07 REJ +4.554e+06  ACC +3.134e+00
+   280 +8.473e+06 REJ +1.861e+06  REJ +3.134e+00
+   300 +3.688e+07 REJ +8.167e+06  REJ +3.134e+00
+   300 +3.688e+07 REJ +8.167e+06  REJ +3.134e+00
+   320 +8.199e+07 REJ +1.140e+07  ACC +3.134e+00
+   326 +2.656e+06 ACC +1.140e+07  ACC +3.134e+00 +3.134e+00 KTC +5.756e-14
+   340 +9.297e+06 REJ +1.696e+06  ACC +3.134e+00
+   360 +6.793e+07 REJ +2.035e+06  ACC +3.134e+00
+   380 +1.602e+07 ACC +1.688e+07  ACC +3.134e+00 +3.134e+00 KTC +7.806e-17
+   400 +1.039e+07 ACC +1.094e+07  REJ +3.134e+00
+   400 +1.039e+07 ACC +1.094e+07  REJ +3.134e+00
+   420 +4.754e+07 REJ +5.346e+06  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   440 +5.925e+07 REJ +1.046e+07  ACC +3.134e+00
+   460 +3.844e+07 REJ +9.544e+06  REJ +3.134e+00
+   480 +6.128e+07 REJ +1.145e+07  ACC +3.134e+00
+   500 +4.301e+07 REJ +6.574e+06  REJ +3.134e+00
+   500 +4.301e+07 REJ +6.574e+06  REJ +3.134e+00
+   520 +2.099e+07 REJ +7.889e+06  ACC +3.134e+00
+   540 +4.677e+07 REJ +7.889e+06  ACC +3.134e+00
+   560 +4.392e+07 REJ +5.527e+06  ACC +3.134e+00
+   580 +3.724e+07 REJ +1.108e+07  REJ +3.134e+00
+   587 +6.943e+06 ACC +1.108e+07  ACC +3.134e+00 +4.000e+01 INF +1.140e-01
+   600 +2.475e+07 REJ +6.943e+06  ACC +3.134e+00
+   600 +2.475e+07 REJ +6.943e+06  ACC +3.134e+00
+   620 +3.814e+07 REJ +1.052e+07  ACC +3.134e+00
+   640 +8.162e+06 ACC +1.564e+07  ACC +3.134e+00 +4.000e+01 INF +1.109e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   660 +5.574e+07 REJ +8.162e+06  ACC +3.134e+00
+   664 +9.030e+06 ACC +1.764e+07  ACC +3.134e+00 +4.000e+01 INF +9.505e-02
+   680 +5.489e+07 REJ +9.030e+06  ACC +3.134e+00
+   700 +5.356e+07 REJ +1.084e+07  ACC +3.134e+00
+   700 +5.356e+07 REJ +1.084e+07  ACC +3.134e+00
+   720 +4.939e+07 REJ +1.300e+07  ACC +3.134e+00
+   725 +6.621e+06 ACC +1.300e+07  ACC +3.134e+00 +9.261e+00 INF +1.000e-02
+   738 +2.779e+06 ACC +6.621e+06  ACC +3.134e+00 +4.000e+01 INF +9.976e-02
+   740 +3.509e+07 REJ +2.779e+06  ACC +3.134e+00
+   760 +3.129e+07 REJ +1.725e+07  ACC +3.134e+00
+   763 +1.391e+07 ACC +1.725e+07  ACC +3.134e+00 +4.000e+01 INF +1.950e-02
+   766 +9.890e+06 ACC +1.391e+07  ACC +3.134e+00 +4.000e+01 INF +2.000e-02
+   775 +4.862e+06 ACC +9.890e+06  ACC +3.134e+00 +4.000e+01 INF +9.505e-02
+   780 +4.281e+07 REJ +4.862e+06  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   786 +3.858e+06 ACC +4.862e+06  ACC +3.134e+00 +3.134e+00 KTC +3.105e-16
+   800 +3.444e+07 REJ +3.858e+06  ACC +3.134e+00
+   800 +3.444e+07 REJ +3.858e+06  ACC +3.134e+00
+   820 +4.252e+07 REJ +7.099e+06  ACC +3.134e+00
+   832 +4.502e+06 ACC +8.519e+06  ACC +3.134e+00 +3.134e+00 KTC +1.569e-13
+   840 +3.900e+07 REJ +4.502e+06  REJ +3.134e+00
+   860 +2.191e+07 REJ +5.402e+06  ACC +3.134e+00
+   880 +3.828e+07 REJ +8.402e+06  ACC +3.134e+00
+   900 +2.699e+07 REJ +1.663e+07  ACC +3.134e+00
+   900 +2.699e+07 REJ +1.663e+07  ACC +3.134e+00
+   912 +1.208e+07 ACC +1.470e+07  ACC +3.134e+00 -0.000e+00 INF +2.000e+00
+   915 +6.348e+06 ACC +1.208e+07  ACC +3.134e+00 +3.134e+00 KTC +3.938e-16
+   920 +5.443e+07 REJ +6.348e+06  REJ +3.134e+00
+   940 +2.660e+07 REJ +1.594e+07  REJ +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   960 +5.074e+07 REJ +7.457e+06  ACC +3.134e+00
+   980 +6.330e+07 REJ +7.457e+06  ACC +3.134e+00
+  1000 +1.929e+07 REJ +9.898e+06  REJ +3.134e+00
+  1000 +1.929e+07 REJ +9.898e+06  REJ +3.134e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999204
+CPXPARAM_TimeLimit                               995.71800000000019
+CPXPARAM_Tune_TimeLimit                          199.14360000000005
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 40 rows and 152 columns.
+MIP Presolve modified 69 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 120 rows, 147 columns, and 594 nonzeros.
+Reduced MIP has 9 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.65 ticks)
+Found incumbent of value 1.1315134e+08 after 0.00 sec. (0.92 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 12 rows and 5 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 108 rows, 134 columns, and 501 nonzeros.
+Reduced MIP has 7 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.43 ticks)
+Probing time = 0.00 sec. (0.02 ticks)
+Clique table members: 9.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             0.000000
+Iteration:    63   Dual objective     =        854929.879073
+Root relaxation solution time = 0.00 sec. (0.78 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.13151e+08                            ---
+Found incumbent of value 1.1315134e+08 after 0.02 sec. (2.33 ticks)
+*     0     0      integral     0   916976.5850   916976.5850       97    0.00%
+Elapsed time = 0.02 sec. (2.35 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 916976.584987 after 0.02 sec. (2.35 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (2.37 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (2.37 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.02sec (det. 2.37 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999204
+CPXPARAM_TimeLimit                               995.71800000000019
+CPXPARAM_Tune_TimeLimit                          199.14360000000005
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 35 rows and 171 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 127 rows, 148 columns, and 504 nonzeros.
+Presolve time = 0.00 sec. (0.30 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            39.578947
+Iteration:    63   Dual objective     =        897423.041526
+Fixed MIP status(1): optimal
+Cplex Time: 0.00sec (det. 1.01 ticks)
+
+Proven optimal solution.
+
+MIP Solution:       916976.584987    (97 iterations, 0 nodes)
+Final Solve:        916976.584987    (78 iterations)
+
+Best possible:      916976.584987
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 9
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        996 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +4.883e+00 INF +1.000e-02
+     0 +1.000e+30     -1.000e+30                  +4.883e+00 INF +1.000e-02
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.541e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC             +6.097e+00 INF +1.000e-02
+   201 +1.578e+06 ACC +1.000e+30  ACC +3.130e+00 +3.130e+00 KTC +5.274e-16
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   202 +3.405e+07 ACC +5.298e+07  ACC +3.130e+00 +5.000e+01 INF +2.852e-01
+   204 +3.085e+07 ACC +3.405e+07  ACC +3.130e+00 +5.000e+01 INF +1.901e-01
+   205 +1.888e+07 ACC +3.085e+07  ACC +3.130e+00 +1.886e+01 INF +2.652e-03
+   208 +1.559e+07 ACC +1.888e+07  ACC +3.130e+00 +5.000e+01 INF +9.999e-02
+   213 +1.141e+07 ACC +1.559e+07  ACC +3.130e+00 +5.000e+01 INF +9.999e-02
+   220 +3.545e+07 REJ +1.141e+07  ACC +3.130e+00
+   231 +1.132e+07 ACC +1.141e+07  ACC +3.130e+00 +3.726e+00 INF +1.213e+00
+   240 +7.165e+06 ACC +1.132e+07  ACC +3.130e+00 +5.000e+01 INF +1.141e+00
+   248 +6.839e+06 ACC +7.165e+06  ACC +3.130e+00 +4.592e+01 INF +1.149e-02
+   251 +3.596e+06 ACC +6.839e+06  ACC +3.130e+00 +2.243e+01 INF +1.000e-02
+   260 +8.584e+07 REJ +3.596e+06  ACC +3.130e+00
+   271 +1.547e+06 ACC +3.596e+06  ACC +3.130e+00 +3.130e+00 KTC +2.498e-16
+   280 +6.598e+06 REJ +1.547e+06  REJ +3.130e+00
+   300 +2.996e+07 REJ +6.598e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   300 +2.996e+07 REJ +6.598e+06  ACC +3.130e+00
+   320 +6.387e+07 REJ +9.610e+06  ACC +3.130e+00
+   322 +9.465e+06 ACC +9.610e+06  ACC +3.130e+00 +3.130e+00 KTC +3.647e-10
+   340 +7.813e+06 REJ +1.437e+06  ACC +3.130e+00
+   360 +5.905e+07 REJ +1.724e+06  ACC +3.130e+00
+   380 +1.311e+07 ACC +1.312e+07  ACC +3.130e+00 +4.264e+00 INF +1.000e-02
+   396 +8.740e+06 ACC +1.311e+07  ACC +3.130e+00 +3.130e+00 KTC +3.331e-16
+   400 +8.432e+06 ACC +8.740e+06  ACC +3.130e+00 +4.860e+00 INF +1.000e-02
+   410 +4.737e+06 ACC +8.432e+06  ACC +3.130e+00 +1.289e+00 INF +1.078e+00
+   420 +4.161e+07 REJ +4.737e+06  ACC +3.130e+00
+   440 +4.761e+07 REJ +8.332e+06  ACC +3.130e+00
+   443 +7.745e+06 ACC +8.332e+06  ACC +3.130e+00 +5.000e+01 INF +5.000e-03
+   460 +2.982e+07 REJ +7.745e+06  ACC +3.130e+00
+   480 +4.924e+07 REJ +9.293e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   486 +6.169e+06 ACC +1.115e+07  ACC +3.130e+00 +5.000e+01 INF +9.999e-02
+   498 +5.230e+06 ACC +6.169e+06  ACC +3.130e+00 +5.000e+01 INF +1.948e-01
+   500 +3.737e+07 REJ +5.230e+06  ACC +3.130e+00
+   500 +3.737e+07 REJ +5.230e+06  ACC +3.130e+00
+   520 +1.707e+07 REJ +6.276e+06  ACC +3.130e+00
+   540 +3.807e+07 REJ +6.276e+06  ACC +3.130e+00
+   551 +4.498e+06 ACC +7.531e+06  ACC +3.130e+00 +5.000e+01 INF +9.999e-02
+   560 +3.445e+07 REJ +4.498e+06  ACC +3.130e+00
+   572 +4.472e+06 ACC +4.498e+06  ACC +3.130e+00 +4.603e+00 INF +1.000e-02
+   580 +3.040e+07 REJ +4.472e+06  ACC +3.130e+00
+   600 +1.980e+07 REJ +6.032e+06  ACC +3.130e+00
+   600 +1.980e+07 REJ +6.032e+06  ACC +3.130e+00
+   620 +3.006e+07 REJ +1.153e+07  ACC +3.130e+00
+   640 +6.455e+06 ACC +1.383e+07  ACC +3.130e+00 +4.491e+00 INF +1.113e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   660 +4.341e+07 REJ +6.455e+06  ACC +3.130e+00
+   664 +7.966e+06 ACC +1.399e+07  ACC +3.130e+00 +5.000e+01 INF +5.000e-03
+   680 +4.587e+07 REJ +7.966e+06  ACC +3.130e+00
+   700 +4.141e+07 REJ +9.560e+06  ACC +3.130e+00
+   700 +4.141e+07 REJ +9.560e+06  ACC +3.130e+00
+   720 +4.026e+07 REJ +1.147e+07  ACC +3.130e+00
+   725 +5.552e+06 ACC +1.147e+07  ACC +3.130e+00 +1.987e+01 INF +1.000e-02
+   738 +2.262e+06 ACC +5.552e+06  ACC +3.130e+00 +5.000e+01 INF +5.000e-03
+   740 +2.928e+07 REJ +2.262e+06  ACC +3.130e+00
+   760 +2.514e+07 REJ +1.388e+07  ACC +3.130e+00
+   763 +1.109e+07 ACC +1.388e+07  ACC +3.130e+00 +5.000e+01 INF +1.950e-02
+   766 +8.021e+06 ACC +1.109e+07  ACC +3.130e+00 +1.646e+00 INF +7.597e-01
+   775 +4.281e+06 ACC +8.021e+06  ACC +3.130e+00 +2.243e+01 INF +2.229e-03
+   780 +3.374e+07 REJ +4.281e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   786 +3.296e+06 ACC +4.281e+06  ACC +3.130e+00 +5.000e+01 INF +2.000e-02
+   800 +2.745e+07 REJ +3.296e+06  ACC +3.130e+00
+   800 +2.745e+07 REJ +3.296e+06  ACC +3.130e+00
+   820 +3.439e+07 REJ +5.643e+06  ACC +3.130e+00
+   832 +3.731e+06 ACC +6.771e+06  ACC +3.130e+00 +5.000e+01 INF +2.000e-02
+   840 +3.310e+07 REJ +3.731e+06  ACC +3.130e+00
+   860 +1.900e+07 REJ +4.478e+06  ACC +3.130e+00
+   880 +3.203e+07 REJ +7.225e+06  ACC +3.130e+00
+   900 +2.224e+07 REJ +1.391e+07  ACC +3.130e+00
+   900 +2.224e+07 REJ +1.391e+07  ACC +3.130e+00
+   906 +1.187e+07 ACC +1.391e+07  ACC +3.130e+00 +5.000e+01 INF +1.100e+00
+   912 +1.061e+07 ACC +1.187e+07  ACC +3.130e+00 -0.000e+00 INF +2.000e+00
+   915 +5.313e+06 ACC +1.061e+07  ACC +3.130e+00 +2.243e+01 INF +2.229e-03
+   920 +4.577e+07 REJ +5.313e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   940 +2.144e+07 REJ +1.309e+07  ACC +3.130e+00
+   959 +6.330e+06 ACC +1.571e+07  ACC +3.130e+00 +1.886e+01 INF +2.652e-03
+   960 +3.947e+07 REJ +6.330e+06  ACC +3.130e+00
+   980 +5.114e+07 REJ +6.330e+06  ACC +3.130e+00
+   995 +8.118e+06 ACC +8.527e+06  ACC +3.130e+00 +6.097e+00 INF +1.000e-02
+  1000 +1.555e+07 REJ +8.118e+06  ACC +3.130e+00
+  1000 +1.555e+07 REJ +8.118e+06  ACC +3.130e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999029
+CPXPARAM_TimeLimit                               995.04600000000028
+CPXPARAM_Tune_TimeLimit                          199.00920000000005
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 47 rows and 176 columns.
+MIP Presolve modified 77 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 137 rows, 163 columns, and 677 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.77 ticks)
+Found incumbent of value 1.1456576e+08 after 0.00 sec. (1.08 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 27 rows and 5 columns.
+Reduced MIP has 110 rows, 136 columns, and 509 nonzeros.
+Reduced MIP has 6 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (0.35 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 1 rows and 1 columns.
+Reduced MIP has 109 rows, 135 columns, and 504 nonzeros.
+Reduced MIP has 6 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.28 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 7.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =             0.000000
+Iteration:    63   Dual objective     =       1367724.441803
+Root relaxation solution time = 0.00 sec. (0.72 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.14566e+08                            ---
+Found incumbent of value 1.1456576e+08 after 0.02 sec. (2.69 ticks)
+      0     0  1541633.1685     4   1.14566e+08  1541633.1685       97   98.65%
+*     0+    0                      1560139.2481  1541633.1685             1.19%
+Found incumbent of value 1560139.248105 after 0.02 sec. (2.94 ticks)
+      0     0        cutoff        1560139.2481                    106    0.00%
+Elapsed time = 0.02 sec. (3.47 ticks, tree = 0.01 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (3.49 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (3.49 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.02sec (det. 3.49 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999999029
+CPXPARAM_TimeLimit                               995.04600000000028
+CPXPARAM_Tune_TimeLimit                          199.00920000000005
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 35 rows and 195 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 151 rows, 170 columns, and 606 nonzeros.
+Presolve time = 0.00 sec. (0.35 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            19.789474
+Iteration:    63   Dual objective     =       1375744.623648
+Fixed MIP status(1): optimal
+Cplex Time: 0.02sec (det. 1.23 ticks)
+
+Proven optimal solution.
+
+MIP Solution:      1560139.248105    (106 iterations, 0 nodes)
+Final Solve:       1560139.248105    (99 iterations)
+
+Best possible:     1560139.248105
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 10
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        995 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  -0.000e+00 INF +2.000e+00
+     0 +1.000e+30     -1.000e+30                  -0.000e+00 INF +2.000e+00
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.540e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC             +3.000e+01 INF +2.900e-02
+   201 +1.578e+06 ACC +1.000e+30  ACC             +3.000e+01 INF +1.000e-03
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   202 +1.096e+06 ACC +1.578e+06  ACC             +3.000e+01 INF +9.505e-02
+   204 +1.023e+06 ACC +1.096e+06  ACC             +3.000e+01 INF +9.505e-02
+   205 +6.347e+05 ACC +1.023e+06  ACC +3.315e+00 +3.315e+00 KTC +9.801e-16
+   220 +5.236e+07 REJ +1.958e+07  REJ +3.315e+00
+   231 +1.866e+07 ACC +1.958e+07  ACC +3.315e+00 +3.315e+00 KTC +1.074e-15
+   240 +1.226e+07 ACC +1.866e+07  REJ +3.315e+00
+   260 +1.298e+08 REJ +6.284e+06  ACC +3.315e+00
+   280 +1.108e+07 REJ +2.471e+06  REJ +3.315e+00
+   300 +4.806e+07 REJ +1.108e+07  REJ +3.315e+00
+   300 +4.806e+07 REJ +1.108e+07  REJ +3.315e+00
+   320 +1.071e+08 REJ +1.525e+07  ACC +3.315e+00
+   326 +3.561e+06 ACC +1.525e+07  ACC +3.315e+00 +6.328e+00 INF +1.000e+00
+   334 +2.242e+06 ACC +3.561e+06  ACC +3.315e+00 +3.000e+01 INF +9.976e-02
+   340 +1.231e+07 REJ +2.242e+06  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   360 +8.794e+07 REJ +2.691e+06  ACC +3.315e+00
+   380 +2.227e+07 ACC +2.282e+07  ACC +3.315e+00 +3.315e+00 KTC +2.272e-16
+   400 +1.451e+07 ACC +1.530e+07  REJ +3.315e+00
+   400 +1.451e+07 ACC +1.530e+07  REJ +3.315e+00
+   420 +6.324e+07 REJ +6.856e+06  ACC +3.315e+00
+   440 +7.930e+07 REJ +1.436e+07  ACC +3.315e+00
+   460 +5.060e+07 REJ +1.280e+07  REJ +3.315e+00
+   475 +1.595e+07 ACC +1.630e+07  ACC +3.315e+00 +6.138e+00 INF +4.887e-03
+   480 +8.395e+07 REJ +1.595e+07  ACC +3.315e+00
+   486 +1.021e+07 ACC +1.595e+07  ACC +3.315e+00 +3.000e+01 INF +1.950e-02
+   498 +9.300e+06 ACC +1.021e+07  ACC +3.315e+00 +3.315e+00 KTC +1.482e-14
+   500 +5.562e+07 REJ +9.300e+06  ACC +3.315e+00
+   500 +5.562e+07 REJ +9.300e+06  ACC +3.315e+00
+   520 +2.927e+07 REJ +1.116e+07  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   540 +6.350e+07 REJ +1.116e+07  ACC +3.315e+00
+   560 +5.982e+07 REJ +7.616e+06  ACC +3.315e+00
+   572 +7.580e+06 ACC +7.616e+06  ACC +3.315e+00 +3.315e+00 KTC +1.573e-14
+   580 +4.879e+07 REJ +7.580e+06  REJ +3.315e+00
+   600 +3.262e+07 REJ +9.135e+06  ACC +3.315e+00
+   600 +3.262e+07 REJ +9.135e+06  ACC +3.315e+00
+   620 +5.415e+07 REJ +2.051e+07  ACC +3.315e+00
+   640 +1.130e+07 ACC +2.025e+07  ACC +3.315e+00 +3.315e+00 KTC +8.724e-15
+   660 +7.703e+07 REJ +1.130e+07  REJ +3.315e+00
+   680 +7.371e+07 REJ +1.157e+07  ACC +3.315e+00
+   700 +6.968e+07 REJ +1.389e+07  ACC +3.315e+00
+   700 +6.968e+07 REJ +1.389e+07  ACC +3.315e+00
+   720 +6.431e+07 REJ +1.680e+07  ACC +3.315e+00
+   725 +8.960e+06 ACC +1.680e+07  ACC +3.315e+00 +5.948e+00 INF +1.000e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   738 +3.808e+06 ACC +8.960e+06  ACC +3.315e+00 +3.000e+01 INF +4.850e-02
+   740 +4.636e+07 REJ +3.808e+06  ACC +3.315e+00
+   760 +4.368e+07 REJ +2.419e+07  ACC +3.315e+00
+   763 +1.898e+07 ACC +2.419e+07  ACC +3.315e+00 +6.138e+00 INF +4.887e-03
+   766 +1.388e+07 ACC +1.898e+07  ACC +3.315e+00 +3.000e+01 INF +2.000e+00
+   775 +6.494e+06 ACC +1.388e+07  ACC +3.315e+00 +3.000e+01 INF +4.731e-03
+   780 +5.959e+07 REJ +6.494e+06  ACC +3.315e+00
+   786 +5.016e+06 ACC +6.494e+06  ACC +3.315e+00 +6.138e+00 INF +4.887e-03
+   800 +4.863e+07 REJ +5.016e+06  ACC +3.315e+00
+   800 +4.863e+07 REJ +5.016e+06  ACC +3.315e+00
+   820 +5.911e+07 REJ +9.928e+06  ACC +3.315e+00
+   832 +5.994e+06 ACC +1.191e+07  ACC +3.315e+00 +1.557e+01 INF +2.000e+00
+   840 +5.032e+07 REJ +5.994e+06  ACC +3.315e+00
+   860 +2.817e+07 REJ +7.193e+06  ACC +3.315e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   880 +5.092e+07 REJ +1.196e+07  ACC +3.315e+00
+   900 +3.629e+07 REJ +2.356e+07  ACC +3.315e+00
+   900 +3.629e+07 REJ +2.356e+07  ACC +3.315e+00
+   906 +2.037e+07 ACC +2.356e+07  ACC +3.315e+00 +3.000e+01 INF +9.505e-02
+   912 +1.540e+07 ACC +2.037e+07  ACC +3.315e+00 +2.169e+01 INF +2.000e+00
+   915 +8.507e+06 ACC +1.540e+07  ACC +3.315e+00 +3.000e+01 INF +4.731e-03
+   920 +7.269e+07 REJ +8.507e+06  ACC +3.315e+00
+   940 +3.772e+07 REJ +2.167e+07  ACC +3.315e+00
+   959 +1.040e+07 ACC +2.601e+07  ACC +3.315e+00 +3.000e+01 INF +1.000e-03
+   960 +6.830e+07 REJ +1.040e+07  ACC +3.315e+00
+   980 +8.980e+07 REJ +1.040e+07  ACC +3.315e+00
+   995 +1.409e+07 ACC +1.435e+07  ACC +3.315e+00 +3.315e+00 KTC +5.638e-16
+  1000 +2.681e+07 REJ +1.409e+07  REJ +3.315e+00
+  1000 +2.681e+07 REJ +1.409e+07  REJ +3.315e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+  MIP    9   1560139.24811      0.03      205      0      cplex
+  NLP   10         3.31485      0.45        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998824
+CPXPARAM_TimeLimit                               994.56200000000035
+CPXPARAM_Tune_TimeLimit                          198.91240000000008
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 47 rows and 176 columns.
+MIP Presolve modified 85 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 138 rows, 163 columns, and 679 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (0.78 ticks)
+Found incumbent of value 1.1456575e+08 after 0.02 sec. (1.09 ticks)
+Probing fixed 5 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 30 rows and 7 columns.
+Reduced MIP has 108 rows, 134 columns, and 485 nonzeros.
+Reduced MIP has 4 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.33 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2 rows and 2 columns.
+Reduced MIP has 106 rows, 132 columns, and 477 nonzeros.
+Reduced MIP has 4 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.27 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 2.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             2.000000
+Iteration:     3   Dual objective     =             4.061882
+Iteration:    64   Dual objective     =       1431978.253633
+Root relaxation solution time = 0.00 sec. (0.67 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.14566e+08                            ---
+Found incumbent of value 1.1456575e+08 after 0.02 sec. (2.59 ticks)
+      0     0  1557104.8974     2   1.14566e+08  1557104.8974       92   98.64%
+*     0+    0                      1569296.1066  1557104.8974             0.78%
+Found incumbent of value 1569296.106574 after 0.02 sec. (2.81 ticks)
+*     0     0      integral     0  1569296.1066  1569296.1066       97    0.00%
+Elapsed time = 0.02 sec. (3.35 ticks, tree = 0.01 MB, solutions = 3)
+Found incumbent of value 1569296.106574 after 0.02 sec. (3.35 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (3.37 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (3.37 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.03sec (det. 3.37 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998824
+CPXPARAM_TimeLimit                               994.56200000000035
+CPXPARAM_Tune_TimeLimit                          198.91240000000008
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 37 rows and 195 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 150 rows, 170 columns, and 604 nonzeros.
+Presolve time = 0.00 sec. (0.35 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            29.684211
+Iteration:    63   Dual objective     =       1374871.881672
+Fixed MIP status(1): optimal
+Cplex Time: 0.00sec (det. 1.29 ticks)
+
+Proven optimal solution.
+
+MIP Solution:      1569296.106574    (97 iterations, 0 nodes)
+Final Solve:       1569296.106575    (103 iterations)
+
+Best possible:     1569296.106574
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 11
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        995 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +1.218e+01 INF +2.000e+00
+     0 +1.000e+30     -1.000e+30                  +1.218e+01 INF +2.000e+00
+    20 +2.201e+07
+    40 +1.584e+07
+    60 +5.540e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC +3.134e+00 +3.134e+00 KTC +1.050e-15
+   220 +4.022e+07 REJ +2.768e+06  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   231 +1.361e+07 ACC +1.445e+07  ACC +3.134e+00 +7.149e+00 INF +1.000e-02
+   240 +9.194e+06 ACC +1.361e+07  ACC +3.134e+00 +9.261e+00 INF +1.000e-02
+   248 +8.454e+06 ACC +9.194e+06  ACC +3.134e+00 +3.134e+00 KTC +3.552e-10
+   260 +9.947e+07 REJ +4.553e+06  ACC +3.134e+00
+   280 +8.472e+06 REJ +1.861e+06  REJ +3.134e+00
+   300 +3.688e+07 REJ +8.168e+06  ACC +3.134e+00
+   300 +3.688e+07 REJ +8.168e+06  ACC +3.134e+00
+   320 +8.199e+07 REJ +1.140e+07  ACC +3.134e+00
+   326 +2.656e+06 ACC +1.140e+07  ACC +3.134e+00 +1.207e+01 INF +2.000e+00
+   334 +1.695e+06 ACC +2.656e+06  ACC +3.134e+00 +3.134e+00 KTC +2.485e-14
+   340 +9.296e+06 REJ +1.695e+06  ACC +3.134e+00
+   360 +6.792e+07 REJ +2.034e+06  ACC +3.134e+00
+   380 +1.602e+07 ACC +1.688e+07  ACC +3.134e+00 +4.000e+01 INF +2.000e-02
+   396 +1.094e+07 ACC +1.602e+07  ACC +3.134e+00 +3.134e+00 KTC +6.809e-15
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   400 +1.039e+07 ACC +1.094e+07  ACC +3.134e+00 +4.000e+01 INF +1.950e-03
+   410 +5.347e+06 ACC +1.039e+07  ACC +3.134e+00 +9.003e-02 INF +2.000e+00
+   420 +4.754e+07 REJ +5.347e+06  ACC +3.134e+00
+   440 +5.925e+07 REJ +1.046e+07  ACC +3.134e+00
+   443 +9.544e+06 ACC +1.046e+07  ACC +3.134e+00 +4.000e+01 INF +9.999e-02
+   460 +3.844e+07 REJ +9.544e+06  ACC +3.134e+00
+   480 +6.128e+07 REJ +1.145e+07  ACC +3.134e+00
+   486 +7.515e+06 ACC +1.374e+07  ACC +3.134e+00 +4.000e+01 INF +9.976e-02
+   498 +6.575e+06 ACC +7.515e+06  ACC +3.134e+00 +8.184e+00 INF +3.709e-01
+   500 +4.301e+07 REJ +6.575e+06  ACC +3.134e+00
+   500 +4.301e+07 REJ +6.575e+06  ACC +3.134e+00
+   520 +2.100e+07 REJ +7.890e+06  ACC +3.134e+00
+   540 +4.677e+07 REJ +7.890e+06  ACC +3.134e+00
+   551 +5.527e+06 ACC +9.468e+06  ACC +3.134e+00 +9.211e+00 INF +4.343e-03
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   560 +4.392e+07 REJ +5.527e+06  ACC +3.134e+00
+   580 +3.724e+07 REJ +1.108e+07  ACC +3.134e+00
+   587 +6.943e+06 ACC +1.108e+07  ACC +3.134e+00 +8.184e+00 INF +3.709e-01
+   600 +2.475e+07 REJ +6.943e+06  ACC +3.134e+00
+   600 +2.475e+07 REJ +6.943e+06  ACC +3.134e+00
+   620 +3.814e+07 REJ +1.052e+07  ACC +3.134e+00
+   640 +8.163e+06 ACC +1.564e+07  ACC +3.134e+00 +9.261e+00 INF +1.000e-02
+   660 +5.574e+07 REJ +8.163e+06  ACC +3.134e+00
+   664 +9.030e+06 ACC +1.764e+07  ACC +3.134e+00 +4.000e+01 INF +1.357e-02
+   680 +5.489e+07 REJ +9.030e+06  ACC +3.134e+00
+   700 +5.356e+07 REJ +1.084e+07  ACC +3.134e+00
+   700 +5.356e+07 REJ +1.084e+07  ACC +3.134e+00
+   720 +4.939e+07 REJ +1.300e+07  ACC +3.134e+00
+   725 +6.621e+06 ACC +1.300e+07  ACC +3.134e+00 +3.134e+00 KTC +4.237e-10
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   740 +3.509e+07 REJ +2.779e+06  REJ +3.134e+00
+   760 +3.129e+07 REJ +1.725e+07  REJ +3.134e+00
+   766 +9.890e+06 ACC +1.391e+07  ACC +3.134e+00 +4.000e+01 INF +1.000e-03
+   775 +4.863e+06 ACC +9.890e+06  ACC +3.134e+00 +4.000e+01 INF +8.500e-03
+   780 +4.281e+07 REJ +4.863e+06  ACC +3.134e+00
+   786 +3.858e+06 ACC +4.863e+06  ACC +3.134e+00 +4.000e+01 INF +1.000e-03
+   800 +3.444e+07 REJ +3.858e+06  ACC +3.134e+00
+   800 +3.444e+07 REJ +3.858e+06  ACC +3.134e+00
+   820 +4.252e+07 REJ +7.100e+06  ACC +3.134e+00
+   832 +4.502e+06 ACC +8.520e+06  ACC +3.134e+00 +1.080e+01 INF +1.000e-02
+   840 +3.901e+07 REJ +4.502e+06  ACC +3.134e+00
+   860 +2.191e+07 REJ +5.403e+06  ACC +3.134e+00
+   880 +3.828e+07 REJ +8.401e+06  ACC +3.134e+00
+   900 +2.699e+07 REJ +1.663e+07  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   900 +2.699e+07 REJ +1.663e+07  ACC +3.134e+00
+   906 +1.470e+07 ACC +1.663e+07  ACC +3.134e+00 +4.000e+01 INF +1.100e-02
+   912 +1.208e+07 ACC +1.470e+07  ACC +3.134e+00 +3.134e+00 KTC +5.263e-10
+   915 +6.348e+06 ACC +1.208e+07  ACC +3.134e+00 +4.000e+01 INF +3.850e-02
+   920 +5.443e+07 REJ +6.348e+06  ACC +3.134e+00
+   940 +2.660e+07 REJ +1.594e+07  ACC +3.134e+00
+   959 +7.458e+06 ACC +1.913e+07  ACC +3.134e+00 -0.000e+00 INF +2.000e+00
+   960 +5.074e+07 REJ +7.458e+06  ACC +3.134e+00
+   980 +6.330e+07 REJ +7.458e+06  ACC +3.134e+00
+   995 +9.899e+06 ACC +1.064e+07  ACC +3.134e+00 +3.134e+00 KTC +7.041e-15
+  1000 +1.929e+07 REJ +9.899e+06  REJ +3.134e+00
+  1000 +1.929e+07 REJ +9.899e+06  REJ +3.134e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+  MIP    9   1560139.24811      0.03      205      0      cplex
+  NLP   10         3.31485      0.45        0      0      msnlp
+  MIP   10   1569296.10657      0.03      200      0      cplex
+  NLP   11         3.13434      0.53        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998624
+CPXPARAM_TimeLimit                               993.99900000000036
+CPXPARAM_Tune_TimeLimit                          198.79980000000006
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 55 rows and 200 columns.
+MIP Presolve modified 94 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 154 rows, 179 columns, and 765 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (0.90 ticks)
+Found incumbent of value 1.1938856e+08 after 0.02 sec. (1.24 ticks)
+Probing fixed 5 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 42 rows and 7 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 112 rows, 138 columns, and 506 nonzeros.
+Reduced MIP has 4 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.39 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3 rows and 3 columns.
+Reduced MIP has 109 rows, 135 columns, and 494 nonzeros.
+Reduced MIP has 4 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.28 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 3.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             2.000000
+Iteration:     3   Dual objective     =             4.061882
+Iteration:    64   Dual objective     =       1420446.048364
+Root relaxation solution time = 0.00 sec. (0.74 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.19389e+08                            ---
+Found incumbent of value 1.1938856e+08 after 0.02 sec. (2.90 ticks)
+*     0     0      integral     0  1619632.7573  1619632.7573       98    0.00%
+Elapsed time = 0.02 sec. (2.93 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 1619632.757286 after 0.02 sec. (2.93 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (2.95 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (2.95 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.02sec (det. 2.96 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998624
+CPXPARAM_TimeLimit                               993.99900000000036
+CPXPARAM_Tune_TimeLimit                          198.79980000000006
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 41 rows and 220 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 170 rows, 191 columns, and 691 nonzeros.
+Presolve time = 0.01 sec. (0.40 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            39.578947
+Iteration:    63   Dual objective     =       1173512.421878
+Fixed MIP status(1): optimal
+Cplex Time: 0.01sec (det. 1.67 ticks)
+
+Proven optimal solution.
+
+MIP Solution:      1619632.757286    (98 iterations, 0 nodes)
+Final Solve:       1619632.757286    (115 iterations)
+
+Best possible:     1619632.757286
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 12
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        994 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30      +3.130e+00 +3.130e+00 KTC +1.998e-15
+     0 +1.000e+30     -1.000e+30      +3.130e+00 +3.130e+00 KTC +1.998e-15
+    20 +1.609e+07
+    40 +1.813e+07
+    60 +2.342e+06
+    80 +2.050e+07
+   100 +6.027e+07
+   120 +4.838e+07
+   140 +4.596e+07
+   160 +3.696e+07
+   180 +2.806e+07
+   200 +1.180e+08
+   200 +2.342e+06 ACC -1.000e+30  ACC +3.130e+00 +1.158e+01 INF +1.000e-02
+   220 +1.628e+07 REJ +2.342e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   231 +1.142e+07 ACC +1.166e+07  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   238 +3.731e+06 ACC +1.142e+07  ACC +3.130e+00 +1.329e+01 INF +1.839e-01
+   240 +4.869e+07 REJ +3.731e+06  ACC +3.130e+00
+   260 +9.742e+07 REJ +4.847e+06  ACC +3.130e+00
+   280 +2.370e+07 REJ +4.847e+06  ACC +3.130e+00
+   300 +3.150e+07 REJ +7.880e+06  ACC +3.130e+00
+   300 +3.150e+07 REJ +7.880e+06  ACC +3.130e+00
+   304 +4.423e+06 ACC +1.097e+07  ACC +3.130e+00 +5.000e+01 INF +4.582e-03
+   320 +6.286e+07 REJ +4.423e+06  ACC +3.130e+00
+   340 +1.422e+07 REJ +1.233e+07  ACC +3.130e+00
+   343 +1.739e+06 ACC +1.233e+07  ACC +3.130e+00 +3.130e+00 KTC +2.401e-15
+   360 +1.857e+07 REJ +1.739e+06  ACC +3.130e+00
+   380 +1.864e+07 REJ +6.803e+06  ACC +3.130e+00
+   394 +1.005e+07 ACC +1.350e+07  ACC +3.130e+00 +5.000e+01 INF +2.000e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   400 +2.795e+07 REJ +1.005e+07  ACC +3.130e+00
+   400 +2.795e+07 REJ +1.005e+07  ACC +3.130e+00
+   420 +5.012e+07 REJ +1.213e+07  ACC +3.130e+00
+   427 +3.984e+06 ACC +1.213e+07  ACC +3.130e+00 +1.350e+01 INF +1.000e-02
+   440 +2.215e+07 REJ +3.984e+06  ACC +3.130e+00
+   449 +5.518e+06 ACC +7.125e+06  ACC +3.130e+00 +5.000e+01 INF +2.000e-02
+   460 +2.201e+07 REJ +5.518e+06  ACC +3.130e+00
+   461 +3.452e+06 ACC +5.518e+06  ACC +3.130e+00 +5.000e+01 INF +9.976e-02
+   480 +3.405e+07 REJ +3.452e+06  ACC +3.130e+00
+   487 +5.152e+06 ACC +9.297e+06  ACC +3.130e+00 +3.130e+00 KTC +3.053e-16
+   500 +4.732e+07 REJ +5.152e+06  ACC +3.130e+00
+   500 +4.732e+07 REJ +5.152e+06  ACC +3.130e+00
+   520 +4.840e+07 REJ +2.762e+06  REJ +3.130e+00
+   540 +3.248e+07 REJ +4.652e+06  REJ +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   560 +3.258e+07 REJ +5.583e+06  REJ +3.130e+00
+   563 +4.362e+06 ACC +5.583e+06  ACC +3.130e+00 +1.158e+01 INF +1.000e-02
+   580 +4.086e+07 REJ +4.362e+06  ACC +3.130e+00
+   600 +3.568e+07 REJ +1.107e+07  ACC +3.130e+00
+   600 +3.568e+07 REJ +1.107e+07  ACC +3.130e+00
+   614 +1.311e+07 ACC +1.329e+07  ACC +3.130e+00 +5.000e+01 INF +1.000e-03
+   620 +1.014e+07 ACC +1.311e+07  ACC +3.130e+00 +5.000e+01 INF +2.000e+00
+   630 +6.370e+06 ACC +1.014e+07  ACC +3.130e+00 +5.000e+01 INF +9.600e-02
+   640 +5.698e+07 REJ +6.370e+06  ACC +3.130e+00
+   641 +3.396e+06 ACC +6.370e+06  ACC +3.130e+00 +5.000e+01 INF +2.900e-02
+   660 +1.990e+07 REJ +3.396e+06  ACC +3.130e+00
+   680 +4.253e+07 REJ +9.333e+06  ACC +3.130e+00
+   686 +1.779e+07 ACC +1.836e+07  ACC +3.130e+00 +3.130e+00 KTC +4.695e-10
+   700 +1.461e+07 REJ +9.682e+06  REJ +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   700 +1.461e+07 REJ +9.682e+06  REJ +3.130e+00
+   720 +1.184e+07 REJ +1.109e+07  REJ +3.130e+00
+   740 +2.610e+07 REJ +4.953e+06  ACC +3.130e+00
+   760 +4.104e+07 REJ +4.953e+06  ACC +3.130e+00
+   780 +3.835e+07 REJ +1.005e+07  ACC +3.130e+00
+   785 +6.183e+06 ACC +1.426e+07  ACC +3.130e+00 +3.130e+00 KTC +4.330e-15
+   800 +3.466e+07 REJ +5.166e+06  ACC +3.130e+00
+   800 +3.466e+07 REJ +5.166e+06  ACC +3.130e+00
+   820 +1.705e+07 REJ +8.469e+06  ACC +3.130e+00
+   840 +2.895e+07 REJ +6.939e+06  ACC +3.130e+00
+   860 +3.446e+07 REJ +4.461e+06  ACC +3.130e+00
+   880 +4.731e+07 REJ +5.353e+06  ACC +3.130e+00
+   900 +3.164e+07 REJ +5.353e+06  ACC +3.130e+00
+   900 +3.164e+07 REJ +5.353e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   920 +1.342e+07 REJ +1.030e+07  ACC +3.130e+00
+   923 +1.271e+07 ACC +1.308e+07  ACC +3.130e+00 +3.130e+00 KTC +2.649e-14
+   940 +2.091e+07 REJ +1.271e+07  ACC +3.130e+00
+   944 +8.660e+06 ACC +1.271e+07  ACC +3.130e+00 +3.130e+00 KTC +3.608e-16
+   960 +1.421e+07 REJ +8.660e+06  REJ +3.130e+00
+   980 +2.323e+07 REJ +7.974e+06  REJ +3.130e+00
+  1000 +8.102e+06 ACC +1.076e+07  REJ +3.130e+00
+  1000 +8.102e+06 ACC +1.076e+07  REJ +3.130e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+  MIP    9   1560139.24811      0.03      205      0      cplex
+  NLP   10         3.31485      0.45        0      0      msnlp
+  MIP   10   1569296.10657      0.03      200      0      cplex
+  NLP   11         3.13434      0.53        0      0      msnlp
+  MIP   11   1619632.75729      0.03      213      0      cplex
+  NLP   12         3.13020      0.50        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998411
+CPXPARAM_TimeLimit                               993.46800000000042
+CPXPARAM_Tune_TimeLimit                          198.69360000000009
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 66 rows and 223 columns.
+MIP Presolve modified 102 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 167 rows, 192 columns, and 839 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.01 ticks)
+Found incumbent of value 1.2328175e+08 after 0.00 sec. (1.39 ticks)
+Probing fixed 6 vars, tightened 0 bounds.
+Probing changed sense of 1 constraints.
+Probing time = 0.00 sec. (0.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 55 rows and 9 columns.
+Reduced MIP has 112 rows, 137 columns, and 500 nonzeros.
+Reduced MIP has 2 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (0.38 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 6 rows and 4 columns.
+Reduced MIP has 106 rows, 131 columns, and 478 nonzeros.
+Reduced MIP has 2 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.28 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 1.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             2.000000
+Iteration:     3   Dual objective     =             4.061882
+Iteration:    64   Dual objective     =       2225090.915333
+Root relaxation solution time = 0.00 sec. (0.63 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.23282e+08                            ---
+Found incumbent of value 1.2328175e+08 after 0.02 sec. (2.93 ticks)
+*     0     0      integral     0  2271056.1449  2271056.1449       87    0.00%
+Elapsed time = 0.02 sec. (2.96 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 2271056.144904 after 0.02 sec. (2.96 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (2.98 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (2.98 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.02sec (det. 2.98 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998411
+CPXPARAM_TimeLimit                               993.46800000000042
+CPXPARAM_Tune_TimeLimit                          198.69360000000009
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 42 rows and 244 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 193 rows, 213 columns, and 791 nonzeros.
+Presolve time = 0.00 sec. (0.45 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            29.684211
+Iteration:    63   Dual objective     =       1204527.899149
+Iteration:   125   Dual objective     =       2252228.005224
+Fixed MIP status(1): optimal
+Cplex Time: 0.02sec (det. 2.36 ticks)
+
+Proven optimal solution.
+
+MIP Solution:      2271056.144904    (87 iterations, 0 nodes)
+Final Solve:       2271056.144904    (164 iterations)
+
+Best possible:     2271056.144904
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 13
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        993 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30      +3.134e+00 +3.134e+00 KTC +1.995e-11
+     0 +1.000e+30     -1.000e+30      +3.134e+00 +3.134e+00 KTC +1.995e-11
+    20 +2.054e+07
+    40 +2.225e+07
+    60 +2.841e+06
+    80 +2.682e+07
+   100 +7.391e+07
+   120 +6.317e+07
+   140 +5.597e+07
+   160 +4.783e+07
+   180 +3.462e+07
+   200 +1.530e+08
+   200 +2.841e+06 ACC -1.000e+30  ACC +3.134e+00 +3.134e+00 KTC +3.197e-10
+   220 +1.971e+07 REJ +2.841e+06  REJ +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   231 +1.402e+07 ACC +1.498e+07  ACC +3.134e+00 +4.000e+01 INF +1.100e+00
+   238 +4.600e+06 ACC +1.402e+07  ACC +3.134e+00 +3.134e+00 KTC +4.339e-11
+   240 +6.227e+07 REJ +4.600e+06  ACC +3.134e+00
+   260 +1.159e+08 REJ +6.266e+06  ACC +3.134e+00
+   280 +2.958e+07 REJ +6.266e+06  ACC +3.134e+00
+   300 +4.037e+07 REJ +9.420e+06  ACC +3.134e+00
+   300 +4.037e+07 REJ +9.420e+06  ACC +3.134e+00
+   320 +8.211e+07 REJ +5.610e+06  ACC +3.134e+00
+   340 +1.860e+07 REJ +1.502e+07  ACC +3.134e+00
+   360 +2.391e+07 REJ +2.176e+06  ACC +3.134e+00
+   380 +2.237e+07 REJ +9.015e+06  ACC +3.134e+00
+   394 +1.298e+07 ACC +1.676e+07  ACC +3.134e+00 +8.184e+00 INF +4.887e-03
+   400 +3.553e+07 REJ +1.298e+07  ACC +3.134e+00
+   400 +3.553e+07 REJ +1.298e+07  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   420 +6.156e+07 REJ +1.558e+07  ACC +3.134e+00
+   427 +5.000e+06 ACC +1.558e+07  ACC +3.134e+00 +3.134e+00 KTC +4.331e-11
+   440 +2.846e+07 REJ +5.000e+06  REJ +3.134e+00
+   460 +2.845e+07 REJ +6.913e+06  ACC +3.134e+00
+   461 +4.190e+06 ACC +6.913e+06  ACC +3.134e+00 +4.037e-03 INF +1.000e+00
+   480 +4.193e+07 REJ +4.190e+06  ACC +3.134e+00
+   487 +6.414e+06 ACC +1.135e+07  ACC +3.134e+00 +3.134e+00 KTC +4.340e-11
+   500 +6.111e+07 REJ +6.414e+06  ACC +3.134e+00
+   500 +6.111e+07 REJ +6.414e+06  ACC +3.134e+00
+   520 +5.751e+07 REJ +3.495e+06  REJ +3.134e+00
+   540 +3.992e+07 REJ +5.717e+06  REJ +3.134e+00
+   560 +4.221e+07 REJ +6.860e+06  REJ +3.134e+00
+   563 +5.520e+06 ACC +6.860e+06  ACC +3.134e+00 +4.000e+01 INF +1.000e-03
+   580 +5.237e+07 REJ +5.520e+06  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   600 +4.687e+07 REJ +1.389e+07  ACC +3.134e+00
+   600 +4.687e+07 REJ +1.389e+07  ACC +3.134e+00
+   614 +1.621e+07 ACC +1.666e+07  ACC +3.134e+00 +3.134e+00 KTC +4.341e-11
+   620 +1.254e+07 ACC +1.621e+07  REJ +3.134e+00
+   640 +6.554e+07 REJ +7.990e+06  ACC +3.134e+00
+   641 +4.118e+06 ACC +7.990e+06  ACC +3.134e+00 +3.134e+00 KTC +1.297e-10
+   660 +2.501e+07 REJ +4.118e+06  ACC +3.134e+00
+   680 +5.444e+07 REJ +1.179e+07  ACC +3.134e+00
+   686 +2.162e+07 ACC +2.304e+07  ACC +3.134e+00 +3.134e+00 KTC +3.196e-10
+   700 +1.863e+07 REJ +1.237e+07  REJ +3.134e+00
+   700 +1.863e+07 REJ +1.237e+07  REJ +3.134e+00
+   720 +1.499e+07 REJ +1.391e+07  ACC +3.134e+00
+   729 +9.922e+06 ACC +1.391e+07  ACC +3.134e+00 +3.134e+00 KTC +4.341e-11
+   740 +3.086e+07 REJ +6.338e+06  ACC +3.134e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   760 +5.275e+07 REJ +6.338e+06  ACC +3.134e+00
+   780 +4.678e+07 REJ +1.273e+07  ACC +3.134e+00
+   785 +7.779e+06 ACC +1.829e+07  ACC +3.134e+00 +3.134e+00 KTC +3.196e-10
+   800 +4.383e+07 REJ +6.387e+06  ACC +3.134e+00
+   800 +4.383e+07 REJ +6.387e+06  ACC +3.134e+00
+   820 +2.100e+07 REJ +1.076e+07  ACC +3.134e+00
+   840 +3.739e+07 REJ +8.204e+06  REJ +3.134e+00
+   860 +4.422e+07 REJ +5.506e+06  ACC +3.134e+00
+   880 +6.058e+07 REJ +6.607e+06  ACC +3.134e+00
+   900 +3.916e+07 REJ +6.607e+06  ACC +3.134e+00
+   900 +3.916e+07 REJ +6.607e+06  ACC +3.134e+00
+   920 +1.666e+07 REJ +1.307e+07  ACC +3.134e+00
+   940 +2.542e+07 REJ +1.568e+07  ACC +3.134e+00
+   944 +1.107e+07 ACC +1.882e+07  ACC +3.134e+00 +3.134e+00 KTC +4.341e-11
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   960 +1.824e+07 REJ +1.107e+07  REJ +3.134e+00
+   980 +3.054e+07 REJ +1.052e+07  REJ +3.134e+00
+  1000 +1.011e+07 ACC +1.388e+07  REJ +3.134e+00
+  1000 +1.011e+07 ACC +1.388e+07  REJ +3.134e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+  MIP    9   1560139.24811      0.03      205      0      cplex
+  NLP   10         3.31485      0.45        0      0      msnlp
+  MIP   10   1569296.10657      0.03      200      0      cplex
+  NLP   11         3.13434      0.53        0      0      msnlp
+  MIP   11   1619632.75729      0.03      213      0      cplex
+  NLP   12         3.13020      0.50        0      0      msnlp
+  MIP   12   2271056.14490      0.05      251      0      cplex
+  NLP   13         3.13378      0.47        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998160
+CPXPARAM_TimeLimit                               992.95200000000034
+CPXPARAM_Tune_TimeLimit                          198.59040000000007
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 66 rows and 223 columns.
+MIP Presolve modified 111 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 168 rows, 192 columns, and 842 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.03 ticks)
+Found incumbent of value 1.2328175e+08 after 0.00 sec. (1.40 ticks)
+Probing fixed 9 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 61 rows and 10 columns.
+Reduced MIP has 107 rows, 132 columns, and 465 nonzeros.
+Reduced MIP has 1 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (0.35 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2 rows and 0 columns.
+Reduced MIP has 105 rows, 130 columns, and 459 nonzeros.
+Reduced MIP has 1 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            39.578947
+Iteration:    63   Dual objective     =       2220109.599851
+Root relaxation solution time = 0.00 sec. (0.63 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.23282e+08                            ---
+Found incumbent of value 1.2328175e+08 after 0.02 sec. (2.83 ticks)
+      0     0  2301047.2294     1   1.23282e+08  2301047.2294       84   98.13%
+*     0+    0                      2388454.3622  2301047.2294             3.66%
+Found incumbent of value 2388454.362236 after 0.02 sec. (3.09 ticks)
+*     0+    0                      2302936.1994  2301047.2294             0.08%
+Found incumbent of value 2302936.199384 after 0.02 sec. (3.24 ticks)
+      0     0        cutoff        2302936.1994                     87    0.00%
+Elapsed time = 0.02 sec. (3.70 ticks, tree = 0.01 MB, solutions = 3)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (3.72 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (3.72 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.03sec (det. 3.72 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999998160
+CPXPARAM_TimeLimit                               992.95200000000034
+CPXPARAM_Tune_TimeLimit                          198.59040000000007
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 44 rows and 244 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 192 rows, 213 columns, and 789 nonzeros.
+Presolve time = 0.00 sec. (0.45 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            39.578947
+Iteration:    63   Dual objective     =       1274546.233779
+Iteration:   125   Dual objective     =       2287475.570470
+Fixed MIP status(1): optimal
+Cplex Time: 0.00sec (det. 2.04 ticks)
+
+Proven optimal solution.
+
+MIP Solution:      2302936.199384    (87 iterations, 0 nodes)
+Final Solve:       2302936.199384    (137 iterations)
+
+Best possible:     2302936.199384
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 14
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        993 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30                  +2.306e+00 INF +1.000e+00
+     0 +1.000e+30     -1.000e+30                  +2.306e+00 INF +1.000e+00
+    20 +2.202e+07
+    40 +1.584e+07
+    60 +5.541e+06
+    80 +3.309e+07
+   100 +2.226e+07
+   120 +3.268e+07
+   140 +3.077e+07
+   160 +5.118e+07
+   180 +2.440e+07
+   200 +3.761e+07
+   200 +1.639e+06 ACC -1.000e+30  ACC             +7.450e-01 INF +2.000e+00
+   201 +1.578e+06 ACC +1.000e+30  ACC             +5.000e+01 INF +5.000e-02
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   202 +1.096e+06 ACC +1.578e+06  ACC             +5.000e+01 INF +5.000e-03
+   204 +1.023e+06 ACC +1.096e+06  ACC             +4.256e+00 INF +1.000e-02
+   205 +6.347e+05 ACC +1.023e+06  ACC             +5.000e+01 INF +1.000e-03
+   208 +4.623e+05 ACC +6.347e+05  ACC +3.130e+00 +3.130e+00 KTC +4.996e-16
+   213 +1.141e+07 ACC +1.559e+07  ACC +3.130e+00 +5.000e+01 INF +9.976e-02
+   220 +3.545e+07 REJ +1.141e+07  ACC +3.130e+00
+   231 +1.132e+07 ACC +1.141e+07  ACC +3.130e+00 -0.000e+00 INF +1.027e+00
+   240 +7.165e+06 ACC +1.132e+07  ACC +3.130e+00 +4.256e+00 INF +1.000e-02
+   248 +6.839e+06 ACC +7.165e+06  ACC +3.130e+00 +5.000e+01 INF +1.008e-01
+   251 +3.596e+06 ACC +6.839e+06  ACC +3.130e+00 +3.130e+00 KTC +1.160e-14
+   260 +8.584e+07 REJ +3.596e+06  ACC +3.130e+00
+   271 +1.547e+06 ACC +3.596e+06  ACC +3.130e+00 +3.130e+00 KTC +1.485e-15
+   280 +6.598e+06 REJ +1.547e+06  REJ +3.130e+00
+   300 +2.996e+07 REJ +6.598e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   300 +2.996e+07 REJ +6.598e+06  ACC +3.130e+00
+   320 +6.387e+07 REJ +9.611e+06  ACC +3.130e+00
+   322 +9.465e+06 ACC +9.611e+06  ACC +3.130e+00 +3.130e+00 KTC +6.266e-09
+   340 +7.814e+06 REJ +1.437e+06  ACC +3.130e+00
+   360 +5.905e+07 REJ +1.725e+06  ACC +3.130e+00
+   380 +1.311e+07 ACC +1.312e+07  ACC +3.130e+00 +5.000e+01 INF +2.900e-02
+   396 +8.741e+06 ACC +1.311e+07  ACC +3.130e+00 +3.130e+00 KTC +2.066e-14
+   400 +8.432e+06 ACC +8.741e+06  ACC +3.130e+00 +3.130e+00 KTC +2.568e-09
+   420 +4.161e+07 REJ +4.739e+06  ACC +3.130e+00
+   440 +4.762e+07 REJ +8.333e+06  ACC +3.130e+00
+   460 +2.982e+07 REJ +7.745e+06  REJ +3.130e+00
+   480 +4.924e+07 REJ +9.294e+06  ACC +3.130e+00
+   500 +3.737e+07 REJ +5.230e+06  REJ +3.130e+00
+   500 +3.737e+07 REJ +5.230e+06  REJ +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   520 +1.707e+07 REJ +6.276e+06  ACC +3.130e+00
+   540 +3.808e+07 REJ +6.276e+06  ACC +3.130e+00
+   560 +3.445e+07 REJ +4.498e+06  ACC +3.130e+00
+   572 +4.472e+06 ACC +4.498e+06  ACC +3.130e+00 +5.570e+00 INF +8.977e-03
+   580 +3.040e+07 REJ +4.472e+06  ACC +3.130e+00
+   600 +1.980e+07 REJ +6.032e+06  ACC +3.130e+00
+   600 +1.980e+07 REJ +6.032e+06  ACC +3.130e+00
+   620 +3.006e+07 REJ +1.153e+07  ACC +3.130e+00
+   640 +6.455e+06 ACC +1.383e+07  ACC +3.130e+00 +4.256e+00 INF +1.000e-02
+   660 +4.341e+07 REJ +6.455e+06  ACC +3.130e+00
+   664 +7.967e+06 ACC +1.399e+07  ACC +3.130e+00 +5.286e+00 INF +1.000e-02
+   680 +4.587e+07 REJ +7.967e+06  ACC +3.130e+00
+   700 +4.141e+07 REJ +9.560e+06  ACC +3.130e+00
+   700 +4.141e+07 REJ +9.560e+06  ACC +3.130e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   720 +4.026e+07 REJ +1.147e+07  ACC +3.130e+00
+   725 +5.551e+06 ACC +1.147e+07  ACC +3.130e+00 +2.154e+00 INF +1.000e+00
+   738 +2.262e+06 ACC +5.551e+06  ACC +3.130e+00 +5.000e+01 INF +1.385e-02
+   740 +2.928e+07 REJ +2.262e+06  ACC +3.130e+00
+   760 +2.514e+07 REJ +1.389e+07  ACC +3.130e+00
+   763 +1.109e+07 ACC +1.389e+07  ACC +3.130e+00 +5.000e+01 INF +2.900e-02
+   766 +8.022e+06 ACC +1.109e+07  ACC +3.130e+00 +2.569e+01 INF +1.000e+00
+   775 +4.282e+06 ACC +8.022e+06  ACC +3.130e+00 +5.000e+01 INF +9.505e-02
+   780 +3.374e+07 REJ +4.282e+06  ACC +3.130e+00
+   786 +3.296e+06 ACC +4.282e+06  ACC +3.130e+00 +5.000e+01 INF +2.001e+00
+   800 +2.745e+07 REJ +3.296e+06  ACC +3.130e+00
+   800 +2.745e+07 REJ +3.296e+06  ACC +3.130e+00
+   820 +3.439e+07 REJ +5.644e+06  ACC +3.130e+00
+   832 +3.732e+06 ACC +6.772e+06  ACC +3.130e+00 +5.000e+01 INF +1.108e-01
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   840 +3.310e+07 REJ +3.732e+06  ACC +3.130e+00
+   860 +1.900e+07 REJ +4.478e+06  ACC +3.130e+00
+   880 +3.203e+07 REJ +7.225e+06  ACC +3.130e+00
+   900 +2.224e+07 REJ +1.391e+07  ACC +3.130e+00
+   900 +2.224e+07 REJ +1.391e+07  ACC +3.130e+00
+   906 +1.187e+07 ACC +1.391e+07  ACC +3.130e+00 +5.000e+01 INF +1.399e-02
+   912 +1.061e+07 ACC +1.187e+07  ACC +3.130e+00 +5.000e+01 INF +1.953e-02
+   915 +5.314e+06 ACC +1.061e+07  ACC +3.130e+00 +1.158e+01 INF +4.319e-03
+   920 +4.577e+07 REJ +5.314e+06  ACC +3.130e+00
+   940 +2.144e+07 REJ +1.309e+07  ACC +3.130e+00
+   959 +6.331e+06 ACC +1.571e+07  ACC +3.130e+00 +3.130e+00 KTC +3.053e-16
+   960 +3.947e+07 REJ +6.331e+06  ACC +3.130e+00
+   980 +5.114e+07 REJ +6.331e+06  ACC +3.130e+00
+   995 +8.119e+06 ACC +8.526e+06  ACC +3.130e+00 +5.000e+01 INF +1.101e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+  1000 +1.555e+07 REJ +8.119e+06  ACC +3.130e+00
+  1000 +1.555e+07 REJ +8.119e+06  ACC +3.130e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+  MIP    9   1560139.24811      0.03      205      0      cplex
+  NLP   10         3.31485      0.45        0      0      msnlp
+  MIP   10   1569296.10657      0.03      200      0      cplex
+  NLP   11         3.13434      0.53        0      0      msnlp
+  MIP   11   1619632.75729      0.03      213      0      cplex
+  NLP   12         3.13020      0.50        0      0      msnlp
+  MIP   12   2271056.14490      0.05      251      0      cplex
+  NLP   13         3.13378      0.47        0      0      msnlp
+  MIP   13   2302936.19938      0.05      224      0      cplex
+  NLP   14         3.13020      0.45        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999997936
+CPXPARAM_TimeLimit                               992.45300000000032
+CPXPARAM_Tune_TimeLimit                          198.49060000000006
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 77 rows and 246 columns.
+MIP Presolve modified 119 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 181 rows, 205 columns, and 915 nonzeros.
+Reduced MIP has 8 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.14 ticks)
+Found incumbent of value 1.2721060e+08 after 0.00 sec. (1.55 ticks)
+Probing fixed 11 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 74 rows and 12 columns.
+Reduced MIP has 107 rows, 131 columns, and 453 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4 rows and 0 columns.
+Reduced MIP has 103 rows, 127 columns, and 441 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.23 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            39.578947
+Iteration:    63   Dual objective     =       2376672.856623
+Root relaxation solution time = 0.00 sec. (0.69 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       1.27211e+08                            ---
+Found incumbent of value 1.2721060e+08 after 0.02 sec. (2.90 ticks)
+*     0     0      integral     0  2701520.3108  2701520.3108       97    0.00%
+Elapsed time = 0.02 sec. (2.93 ticks, tree = 0.00 MB, solutions = 2)
+Found incumbent of value 2701520.310812 after 0.02 sec. (2.93 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (2.95 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (2.95 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.02sec (det. 2.95 ticks)
+Fixing integer variables, and solving final LP...
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999997936
+CPXPARAM_TimeLimit                               992.45300000000032
+CPXPARAM_Tune_TimeLimit                          198.49060000000006
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 1 time.
+LP Presolve eliminated 48 rows and 270 columns.
+Aggregator did 10 substitutions.
+Reduced LP has 212 rows, 233 columns, and 883 nonzeros.
+Presolve time = 0.02 sec. (0.51 ticks)
+Symmetry aggregator did 70 additional substitutions.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =             0.000000
+Iteration:     2   Dual objective     =            39.578947
+Iteration:    63   Dual objective     =       1697487.677562
+Iteration:   125   Dual objective     =       2701513.605248
+
+Dual crossover.
+  Dual:  Fixing 24 variables.
+       23 DMoves:  Infeasibility  2.39879228e-10  Objective  2.70152031e+06
+        0 DMoves:  Infeasibility  1.58615876e-09  Objective  2.70152031e+06
+  Dual:  Pushed 2, exchanged 22.
+  Primal:  Fixed no variables.
+Fixed MIP status(1): optimal
+Cplex Time: 0.02sec (det. 2.33 ticks)
+
+Proven optimal solution.
+
+MIP Solution:      2701520.310812    (97 iterations, 0 nodes)
+Final Solve:       2701520.310812    (126 iterations)
+
+Best possible:     2701520.310812
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- DICOPT: Starting major iteration 15
+--- DICOPT: Setting up next NLP
+
+--- Reset Solvelink = 2
+
+Multi Start      28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+
+
+
+  MsNlp Local Nlp Solver                       = CONOPT
+
+  MsNlp Termination Criteria:
+     Time Limit                                =        992 (sec)
+     Limit on MsNlp Iterations (Trial Points)  =       1000
+     Maximum Number of Local Solver Calls      =       1000
+     Maximum Number Solver Calls with no
+       Improvement in Objective Value          =        100
+     Maximum Number of Distinct Local Optima   =       1000
+
+
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+     0 +1.000e+30     -1.000e+30      +3.062e+00 +3.062e+00 KTC +1.204e-13
+     0 +1.000e+30     -1.000e+30      +3.062e+00 +3.062e+00 KTC +1.204e-13
+    20 +1.986e+07
+    40 +2.112e+07
+    60 +2.738e+06
+    80 +2.472e+07
+   100 +6.896e+07
+   120 +5.916e+07
+   140 +5.332e+07
+   160 +4.497e+07
+   180 +3.272e+07
+   200 +1.440e+08
+   200 +2.738e+06 ACC -1.000e+30  ACC +3.062e+00 +6.946e+00 INF +2.320e+00
+   220 +1.897e+07 REJ +2.738e+06  ACC +3.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   231 +1.351e+07 ACC +1.403e+07  ACC +3.062e+00 +3.062e+00 KTC +1.969e-10
+   240 +5.927e+07 REJ +4.390e+06  REJ +3.062e+00
+   260 +1.119e+08 REJ +5.899e+06  ACC +3.062e+00
+   280 +2.809e+07 REJ +5.899e+06  REJ +3.062e+00
+   300 +3.801e+07 REJ +8.951e+06  ACC +3.062e+00
+   300 +3.801e+07 REJ +8.951e+06  ACC +3.062e+00
+   320 +7.556e+07 REJ +5.396e+06  ACC +3.062e+00
+   340 +1.731e+07 REJ +1.421e+07  ACC +3.062e+00
+   360 +2.238e+07 REJ +2.075e+06  ACC +3.062e+00
+   380 +2.113e+07 REJ +8.168e+06  ACC +3.062e+00
+   394 +1.210e+07 ACC +1.605e+07  ACC +3.062e+00 +5.000e+01 INF +1.095e+00
+   400 +3.329e+07 REJ +1.210e+07  ACC +3.062e+00
+   400 +3.329e+07 REJ +1.210e+07  ACC +3.062e+00
+   420 +5.901e+07 REJ +1.452e+07  ACC +3.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   427 +4.714e+06 ACC +1.452e+07  ACC +3.062e+00 +3.962e+00 INF +1.262e-02
+   440 +2.672e+07 REJ +4.714e+06  ACC +3.062e+00
+   449 +6.660e+06 ACC +8.410e+06  ACC +3.062e+00 +3.062e+00 KTC +3.711e-10
+   460 +2.703e+07 REJ +6.660e+06  ACC +3.062e+00
+   461 +4.014e+06 ACC +6.660e+06  ACC +3.062e+00 +5.000e+01 INF +1.901e-01
+   480 +4.034e+07 REJ +4.014e+06  ACC +3.062e+00
+   487 +6.126e+06 ACC +1.092e+07  ACC +3.062e+00 +5.000e+01 INF +9.505e-02
+   500 +5.687e+07 REJ +6.126e+06  ACC +3.062e+00
+   500 +5.687e+07 REJ +6.126e+06  ACC +3.062e+00
+   507 +3.374e+06 ACC +6.126e+06  ACC +3.062e+00 +5.000e+01 INF +1.267e+00
+   520 +5.538e+07 REJ +3.374e+06  ACC +3.062e+00
+   537 +5.498e+06 ACC +1.000e+07  ACC +3.062e+00 +5.570e+00 INF +5.020e-01
+   540 +3.828e+07 REJ +5.498e+06  ACC +3.062e+00
+   560 +3.979e+07 REJ +6.597e+06  ACC +3.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   563 +5.229e+06 ACC +6.597e+06  ACC +3.062e+00 +5.000e+01 INF +2.200e+00
+   580 +4.964e+07 REJ +5.229e+06  ACC +3.062e+00
+   600 +4.318e+07 REJ +1.317e+07  ACC +3.062e+00
+   600 +4.318e+07 REJ +1.317e+07  ACC +3.062e+00
+   620 +1.207e+07 ACC +1.580e+07  ACC +3.062e+00 +1.023e+01 INF +4.887e-03
+   630 +7.567e+06 ACC +1.207e+07  ACC +3.062e+00 +5.000e+01 INF +7.046e-01
+   640 +6.322e+07 REJ +7.567e+06  ACC +3.062e+00
+   641 +3.953e+06 ACC +7.567e+06  ACC +3.062e+00 +3.062e+00 KTC +1.674e-12
+   660 +2.328e+07 REJ +3.953e+06  ACC +3.062e+00
+   680 +5.041e+07 REJ +1.120e+07  ACC +3.062e+00
+   686 +2.064e+07 ACC +2.243e+07  ACC +3.062e+00 +5.000e+01 INF +1.001e+00
+   688 +1.166e+07 ACC +2.064e+07  ACC +3.062e+00 +5.000e+01 INF +1.100e+00
+   700 +1.786e+07 REJ +1.166e+07  ACC +3.062e+00
+   700 +1.786e+07 REJ +1.166e+07  ACC +3.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   719 +1.337e+07 ACC +1.399e+07  ACC +3.062e+00 +1.023e+01 INF +4.646e-01
+   720 +1.415e+07 REJ +1.337e+07  ACC +3.062e+00
+   729 +9.331e+06 ACC +1.337e+07  ACC +3.062e+00 +3.062e+00 KTC +3.711e-10
+   740 +2.986e+07 REJ +6.019e+06  ACC +3.062e+00
+   760 +4.893e+07 REJ +6.019e+06  ACC +3.062e+00
+   780 +4.435e+07 REJ +1.221e+07  ACC +3.062e+00
+   785 +7.405e+06 ACC +1.701e+07  ACC +3.062e+00 +3.062e+00 KTC +1.107e-11
+   800 +4.128e+07 REJ +6.151e+06  ACC +3.062e+00
+   800 +4.128e+07 REJ +6.151e+06  ACC +3.062e+00
+   820 +2.019e+07 REJ +1.031e+07  ACC +3.062e+00
+   840 +3.504e+07 REJ +7.879e+06  REJ +3.062e+00
+   860 +4.085e+07 REJ +5.246e+06  ACC +3.062e+00
+   880 +5.765e+07 REJ +6.295e+06  ACC +3.062e+00
+   900 +3.713e+07 REJ +6.295e+06  ACC +3.062e+00
+
+   Itn    Penval  Merit    Merit    Dist    Best      Solver    Term    Sinf
+                  Filter Threshold  Filter   Obj        Obj     Code
+   900 +3.713e+07 REJ +6.295e+06  ACC +3.062e+00
+   920 +1.601e+07 REJ +1.253e+07  ACC +3.062e+00
+   940 +2.424e+07 REJ +1.503e+07  ACC +3.062e+00
+   944 +1.043e+07 ACC +1.804e+07  ACC +3.062e+00 +3.062e+00 KTC +7.750e-12
+   960 +1.743e+07 REJ +1.043e+07  REJ +3.062e+00
+   980 +2.835e+07 REJ +9.713e+06  REJ +3.062e+00
+  1000 +9.842e+06 ACC +1.309e+07  REJ +3.062e+00
+  1000 +9.842e+06 ACC +1.309e+07  REJ +3.062e+00
+ MsNlp Terminated When Iteration Count Exceeded Limit of 1000
+
+
+--- Exiting MSNLP
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+  MIP    9   1560139.24811      0.03      205      0      cplex
+  NLP   10         3.31485      0.45        0      0      msnlp
+  MIP   10   1569296.10657      0.03      200      0      cplex
+  NLP   11         3.13434      0.53        0      0      msnlp
+  MIP   11   1619632.75729      0.03      213      0      cplex
+  NLP   12         3.13020      0.50        0      0      msnlp
+  MIP   12   2271056.14490      0.05      251      0      cplex
+  NLP   13         3.13378      0.47        0      0      msnlp
+  MIP   13   2302936.19938      0.05      224      0      cplex
+  NLP   14         3.13020      0.45        0      0      msnlp
+  MIP   14   2701520.31081      0.03      223      0      cplex
+  NLP   15         3.06201<     0.48        0      0      msnlp
+
+IBM ILOG CPLEX   28.1.0 r5b48834 Released Aug 02, 2019 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.9.0.0
+
+Reading data...
+Starting Cplex...
+Unable to load names.
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               1999997713
+CPXPARAM_TimeLimit                               991.93800000000033
+CPXPARAM_Tune_TimeLimit                          198.38760000000008
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\bernalde\Documents\gamsdir\projdir\225r\"
+Tried aggregator 2 times.
+MIP Presolve eliminated 78 rows and 270 columns.
+MIP Presolve modified 138 coefficients.
+Aggregator did 11 substitutions.
+Reduced MIP has 202 rows, 226 columns, and 1029 nonzeros.
+Reduced MIP has 7 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.28 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (1.55 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.01 sec. (1.55 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.01sec (det. 1.55 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- DICOPT: Starting major iteration 16
+--- DICOPT: Search terminated: infeasible MIP master problem
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1         9.89474<     0.27        0      0      msnlp
+  MIP    1        17.72720      0.13       40      0      cplex
+  NLP    2         4.06188<     0.52        0      0      msnlp
+  MIP    2        17.72720      0.03       59      0      cplex
+  NLP    3         4.06188<     0.36        0      0      msnlp
+  MIP    3      7557.10073      0.13       78      0      cplex
+  NLP    4         3.31485<     0.64        0      0      msnlp
+  MIP    4     26452.26404      0.13      108      0      cplex
+  NLP    5         3.13434<     0.53        0      0      msnlp
+  MIP    5     44543.92326      0.14      140      0      cplex
+  NLP    6         3.13020<     0.53        0      0      msnlp
+  MIP    6    876480.18837      0.05      165      0      cplex
+  NLP    7         3.31485      0.48        0      0      msnlp
+  MIP    7    887697.00760      0.05      206      0      cplex
+  NLP    8         3.13434      0.31        0      0      msnlp
+  MIP    8    916976.58499      0.03      175      0      cplex
+  NLP    9         3.13020      0.64        0      0      msnlp
+  MIP    9   1560139.24811      0.03      205      0      cplex
+  NLP   10         3.31485      0.45        0      0      msnlp
+  MIP   10   1569296.10657      0.03      200      0      cplex
+  NLP   11         3.13434      0.53        0      0      msnlp
+  MIP   11   1619632.75729      0.03      213      0      cplex
+  NLP   12         3.13020      0.50        0      0      msnlp
+  MIP   12   2271056.14490      0.05      251      0      cplex
+  NLP   13         3.13378      0.47        0      0      msnlp
+  MIP   13   2302936.19938      0.05      224      0      cplex
+  NLP   14         3.13020      0.45        0      0      msnlp
+  MIP   14   2701520.31081      0.03      223      0      cplex
+  NLP   15         3.06201<     0.48        0      0      msnlp
+  MIP   15        *Infeas*      0.01        0      0      cplex
+--- DICOPT: Terminating...
+--- DICOPT: Stopped on infeasible MIP
+
+      The search was stopped because the last MIP problem
+      was infeasible. DICOPT will not be able to find
+      a better integer solution.
+
+--- DICOPT: Best integer solution found: 3.062015
+--- Restarting execution
+--- CSTR_2.gms(135) 2 Mb
+--- Reading solution for model SUP_CSTR
+*** Status: Normal completion
+--- Job CSTR_2.gms Stop 09/11/19 01:55:41 elapsed 0:00:10.010
