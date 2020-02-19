@@ -1,1 +1,8 @@
-# optimal-superstructures-dsda
+# Optimal design of process superstructures: Catalytic distillation test case
+This repository includes the files of the manuscript Optimal design of superstructures for placing units and streams with multiple and ordered available locations. Part I: A new mathematical framework.
+
+The files included in this repository correspond to the Mixed-integer nonlinear optimization problem to optimally design a continuously stirred tank reactor (CSTR) network. The optimization models and proposed algorithm are implemented in GAMS.
+
+Here we propose a new approach for the optimal design of superstructures in chemical engineering. The method exploits the structure of a specific type of problem, i.e., the case where it is necessary to find the optimal location of a processing unit or a stream over a naturally ordered discrete set. The proposed methodology consists of reformulating the binary variables of the original Mixed-Integer Nonlinear Problem (MINLP) with a smaller set of integer variables referred to as external variables. Then, the reformulated optimization problem can be decomposed into a master Integer Program with Linear Constraints (master IPLC) and primal sub-problems in the form of Fixed Nonlinear Programs (FNLPs), i.e., Nonlinear Programs (NLPs) with integer variables fixed. The use of the Discrete-Steepest Descent Algorithm (D-SDA) is considered for the master IPLC, while the primal FNLPs are solved with existing Nonlinear Programming (NLP) solvers.
+
+The new methodology does not guarantee global optimality; however, the results show that it can find a local solution in a short computational time.
