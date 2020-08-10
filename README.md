@@ -1,5 +1,5 @@
 # Optimal design of process superstructures: CSTR Network case
-This repository includes the files of the manuscript Optimal design of superstructures for placing units and streams with multiple and ordered available locations. Part I: A new mathematical framework.
+This repository includes the files of the manuscript [Optimal design of superstructures for placing units and streams with multiple and ordered available locations. Part I: A new mathematical framework](https://doi.org/10.1016/j.compchemeng.2020.106794).
 
 The files included in this repository correspond to the Mixed-integer nonlinear optimization problem to optimally design a continuously stirred tank reactor (CSTR) network. The optimization models and proposed algorithm are implemented in GAMS.
 
